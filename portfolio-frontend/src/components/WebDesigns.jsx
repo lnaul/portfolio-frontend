@@ -4,7 +4,17 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './WebDesigns.css';
 
+import dhartiImage from '../assets/images/dharti.png';
+import charpatillaImage from '../assets/images/charpatilla.png';
+import phuketBicycleImage from '../assets/images/phuket-bicycle.png';
+
 gsap.registerPlugin(ScrollTrigger);
+
+const imageMap = {
+  dharti: dhartiImage,
+  charpatilla: charpatillaImage,
+  'phuket-bicycle': phuketBicycleImage,
+};
 
 const WebDesigns = () => {
   const [projects, setProjects] = useState([]);
@@ -45,7 +55,7 @@ const WebDesigns = () => {
               className="project-card"
               ref={(el) => (projectsRef.current[index] = el)}
             >
-              <img src={project.image} alt={project.title} />
+              <img src={imageMap[project.image]} alt={project.title} />
               <h3>{project.title}</h3>
             </div>
           ))
