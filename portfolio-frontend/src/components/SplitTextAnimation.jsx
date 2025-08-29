@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
+import { gsap } from 'gsap/dist/gsap'; // Changed import path
 import { SplitText } from '../utils/SplitText'; // Import SplitText from utils
 
 gsap.registerPlugin(SplitText);
