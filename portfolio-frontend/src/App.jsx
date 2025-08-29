@@ -4,7 +4,7 @@ function App() {
   const [backendMessage, setBackendMessage] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3001/')
+    fetch('https://portfolio-backend-1-vcfo.onrender.com/')
       .then(response => response.text())
       .then(data => setBackendMessage(data))
       .catch(error => console.error('Error fetching backend message:', error));
