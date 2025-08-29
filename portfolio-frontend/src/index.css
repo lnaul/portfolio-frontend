@@ -173,5 +173,4 @@ body:after {
   z-index: 1001; /* Ensure it's above body:after (999) and main-nav (1000) */
   min-height: 100vh; /* Ensure it takes up full viewport height */
   width: 100%; /* Ensure it takes full width */
-  
 }
