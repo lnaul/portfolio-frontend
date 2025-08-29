@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Marvin Visions Variable';
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/MarvinVisionsTrial-Variable.ttf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +12,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #333; /* Dark Gray */
   color: #eee; /* Light Gray for text */
+  min-height: 100vh; /* Added for body height */
+  display: flex; /* Added for body flex */
+  align-items: center; /* Added for body flex */
+  padding: 1rem; /* Added for body padding */
+}
+
+body:after {
+    content: '';
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/texture.svg);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    pointer-events: none;
+    opacity: 0.2;
+    filter: invert(1);
+    background-size: cover;
 }
 
 .main-nav {
@@ -19,7 +45,7 @@ body {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 1002; /* Ensure it's above app-container */
 }
 
 .nav-left, .nav-center, .nav-right {
@@ -63,18 +89,89 @@ body {
   background-color: #44cc44; /* Slightly darker green on hover */
 }
 
-.content-placeholder {
-  padding: 50px 30px;
-  text-align: center;
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 30px;
+  min-height: calc(100vh - 70px); /* Adjust based on nav height */
+  gap: 50px;
+  flex-wrap: wrap;
 }
 
-.content-placeholder h1 {
+.hero-left, .hero-right {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Specific styling for the quote */
+#quote {
+  --weight: 10;
+  font-family: 'Marvin Visions Variable';
+  font-size: 6.5rem;
+  font-weight: 170;
+  background-size: contain;
+  line-height: 0.8;
+  margin: 0;
+  text-align: left;
+}
+
+#quote > * {
+  color: hsl(347, 7%, 29%); /* This color will be animated by GSAP */
+  font-variation-settings: 'wght' var(--weight, 10);
+}
+
+
+.hero-left h1, .hero-left h2, .hero-left p { /* Remove these styles as they are replaced by #quote */
+  /* font-size: 3em; */
+  /* color: #66ff66; */
+  /* margin-bottom: 10px; */
+}
+
+
+.hero-right h3 {
+  font-size: 2em;
   color: #66ff66; /* Acidy Green */
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.content-placeholder p {
-  max-width: 800px;
-  margin: 0 auto 20px auto;
-  line-height: 1.6;
+.hero-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hero-right li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #eee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left, .hero-right {
+    max-width: 100%;
+  }
+
+  .hero-left h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-left h2 {
+    font-size: 1.5em;
+  }
+}
+
+.app-container {
+  position: relative;
+  z-index: 1001; /* Ensure it's above body:after (999) and main-nav (1000) */
+  min-height: 100vh; /* Ensure it takes up full viewport height */
+  width: 100%; /* Ensure it takes full width */
+  
 }
