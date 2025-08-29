@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { gsap } from 'gsap/dist/gsap'; // Changed import path
+import { gsap } from 'gsap'; // Changed import path back to just 'gsap'
 import { SplitText } from '../utils/SplitText'; // Import SplitText from utils
 
 gsap.registerPlugin(SplitText);
@@ -14,7 +14,7 @@ function SplitTextAnimation() {
       duration: 7,
       "--weight": "300",
       ease: "power3.out",
-      color: "hsl(+=110, +=80%, +=20%)",
+      color: "hsl(120, 100%, 60%)", // Changed to a fixed acidy green HSL
       stagger: {
         each: 0.1,
       }
