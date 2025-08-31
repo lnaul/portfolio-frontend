@@ -1,6 +1,9 @@
 import React from 'react';
 import './index.css'; // Import the CSS file
 import SplitTextAnimation from './components/SplitTextAnimation'; // Import the new component
+import CodeIcon from './components/icons/CodeIcon';
+import MobileIcon from './components/icons/MobileIcon';
+import GamepadIcon from './components/icons/GamepadIcon';
 
 function App() {
   return (
@@ -11,9 +14,12 @@ function App() {
           <span className="portfolio-word">Portfolio</span>
         </div>
         <div className="nav-center">
-          <a href="#frontend">Front-End</a>
-          <a href="#mobile">Mobile UX/UI</a>
-          <a href="#game">Game Dev</a>
+          <a href="#frontend" className="nav-link-text">Front-End</a>
+          <a href="#mobile" className="nav-link-text">Mobile UX/UI</a>
+          <a href="#game" className="nav-link-text">Game Dev</a>
+          <a href="#frontend" className="nav-link-icon"><CodeIcon /></a>
+          <a href="#mobile" className="nav-link-icon"><MobileIcon /></a>
+          <a href="#game" className="nav-link-icon"><GamepadIcon /></a>
         </div>
         <div className="nav-right">
           <a href="#contact" className="contact-btn">Contact</a>
@@ -21,21 +27,11 @@ function App() {
       </nav>
 
       {/* New Hero Section with SplitText animation and text content */}
-      <section style={{
-        minHeight: '50vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: '50px', // Space between columns
-        padding: '50px', // Padding for the section
-        color: '#eee' // Text color for the section
-      }}>
-        {/* Left column: 2/3 width */}
-        <div style={{ flex: 2, textAlign: 'left' }}>
+      <section className="info-section">
+        <div className="info-section-left">
           <SplitTextAnimation />
         </div>
-        {/* Right column: 1/3 width */}
-        <div style={{ flex: 1, textAlign: 'left' }}>
+        <div className="info-section-right">
           <h2>About My Work</h2>
           <p>
             This section will contain more details about my professional journey and philosophy.

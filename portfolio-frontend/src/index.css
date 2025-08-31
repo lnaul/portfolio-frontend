@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 @font-face {
   font-family: 'Marvin Visions Variable';
   src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/MarvinVisionsTrial-Variable.ttf");
@@ -89,6 +97,26 @@ body:after {
   background-color: #44cc44; /* Slightly darker green on hover */
 }
 
+.info-section {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+  color: #eee;
+}
+
+.info-section-left {
+  flex: 2;
+  text-align: left;
+}
+
+.info-section-right {
+  flex: 1;
+  text-align: left;
+}
+
 .hero-section {
   display: flex;
   justify-content: center;
@@ -148,8 +176,27 @@ body:after {
   color: #eee;
 }
 
+.nav-link-icon {
+  color: #eee;
+  display: none;
+}
+
+.nav-link-icon:hover {
+  color: #66ff66;
+}
+
+.nav-svg {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .info-section {
+    flex-direction: column;
+  }
+
   .hero-section {
     flex-direction: column;
     text-align: center;
@@ -165,6 +212,15 @@ body:after {
 
   .hero-left h2 {
     font-size: 1.5em;
+  }
+
+  .nav-link-text {
+    display: none;
+  }
+
+  .nav-link-icon {
+    display: inline-block;
+    margin: 0 10px;
   }
 }
 
