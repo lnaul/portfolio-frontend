@@ -54,42 +54,16 @@ function App() {
         </div>
       </section>
 
-      <div className="hero-section">
-        <div className="hero-left">
-          <h1>Dmitry Naumov</h1>
-          <h2>Senior UX/UI Designer & Developer</h2>
-          <p>
-            Hello and welcome! I'm thrilled to share a collection of
-            my work with you, where you'll see how thoughtful
-            UI/UX design truly comes to life through hands-on
-            development.
-          </p>
-          <p>
-            This portfolio is a journey through
-            projects where I've poured my passion into creating
-            seamless, intuitive, and genuinely delightful digital
-            experiences.
-          </p>
-          <p>
-            From initial concept to final implementation, each piece
-            here represents my commitment to understanding user
-            needs and delivering impactful solutions. I hope you
-            enjoy exploring these projects as much as I enjoyed
-            bringing them to fruition.
-          </p>
+      <footer className="main-footer">
+        <div className="footer-column">
+          <span className="footer-logo">Dee</span>
         </div>
-        <div className="hero-right">
-          <h3>Can Do...</h3>
-          <ul>
-            <li>UI/UX Design</li>
-            <li>Front-End Development</li>
-            <li>Mobile Prototyping</li>
-            <li>Game Development</li>
-            <li>Problem Solving</li>
-            <li>Creative Solutions</li>
-          </ul>
+        <div className="footer-column">
+          <p>Contact Information:</p>
+          <p>Email: info@example.com</p>
+          <p>Phone: +123 456 7890</p>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }

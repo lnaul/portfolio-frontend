@@ -12,9 +12,9 @@ function SplitTextAnimation() {
 
     tl.to(words, {
       duration: 7,
-      "--weight": "300",
+      "--weight": "400", // Changed to 800
       ease: "power3.out",
-      color: "hsl(120, 100%, 60%)", // Changed to a fixed acidy green HSL
+      color: "var(--color-accent)", // Changed to use CSS variable
       stagger: {
         each: 0.1,
       }
@@ -27,19 +27,20 @@ function SplitTextAnimation() {
   }, []);
 
   return (
-    <div style={{ padding: '50px', textAlign: 'center', backgroundColor: 'transparent', color: '#eee' }}>
+    <div style={{ padding: '50px', textAlign: 'center', backgroundColor: 'transparent', color: 'var(--color-primary-light)' }}> {/* Updated color */}
       <h2 id="quote" style={{
-        fontFamily: "'Marvin Visions Variable'",
-        fontSize: "4rem",
-        fontWeight: "150",
-        lineHeight: "1.1",
+        // Removed fontFamily inline style
+        // Removed fontSize
+        fontWeight: "400", // Changed to 800
+        lineHeight: "1.2",
         margin: "0",
         textAlign: "left",
+        letterSpacing: "0rem",
         // The color and font-variation-settings will be animated by GSAP
         // Initial color is set by GSAP's from/to, but we need a fallback for non-JS
         // Removed: color: "hsl(347, 7%, 29%)"
       }}>
-        The ships hung in the sky<br/>much in the same way<br/>that bricks don't.
+        Crafting Digital Experiences Through Design & Development
       </h2>
     </div>
   );

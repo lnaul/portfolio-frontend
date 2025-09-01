@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+:root {
+  --color-primary-dark: #1A1A1A;
+  --color-secondary-dark: #2C2C2C;
+  --color-accent: #66FF66;
+  --color-primary-light: #E0E0E0;
+  --color-secondary-light: #A0A0A0;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -13,17 +23,19 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #333; /* Dark Gray */
-  color: #eee; /* Light Gray for text */
-  min-height: 100vh; /* Added for body height */
-  display: flex; /* Added for body flex */
-  align-items: center; /* Added for body flex */
-  padding: 1rem; /* Added for body padding */
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Marvin Visions Variable', sans-serif;
 }
 
 body:after {
@@ -47,13 +59,13 @@ body:after {
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #222; /* Slightly darker gray for nav */
+  background-color: var(--color-secondary-dark);
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  z-index: 1002; /* Ensure it's above app-container */
+  z-index: 1002;
 }
 
 .nav-left, .nav-center, .nav-right {
@@ -64,17 +76,17 @@ body:after {
 .logo {
   font-size: 2em;
   font-weight: bold;
-  color: #66ff66; /* Acidy Green */
+  color: var(--color-accent);
   margin-right: 5px;
 }
 
 .portfolio-word {
   font-size: 1.2em;
-  color: #eee; /* Light Gray */
+  color: var(--color-primary-light);
 }
 
 .nav-center a, .nav-right a {
-  color: #eee; /* Light Gray */
+  color: var(--color-primary-light);
   text-decoration: none;
   margin: 0 15px;
   font-weight: bold;
@@ -82,19 +94,19 @@ body:after {
 }
 
 .nav-center a:hover, .nav-right a:hover {
-  color: #66ff66; /* Acidy Green on hover */
+  color: var(--color-accent);
 }
 
 .contact-btn {
-  background-color: #66ff66; /* Acidy Green */
-  color: #222 !important; /* Dark text on button */
+  background-color: var(--color-accent);
+  color: var(--color-secondary-dark) !important;
   padding: 8px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .contact-btn:hover {
-  background-color: #44cc44; /* Slightly darker green on hover */
+  background-color: #44cc44;
 }
 
 .info-section {
@@ -104,7 +116,7 @@ body:after {
   align-items: center;
   gap: 50px;
   padding: 50px;
-  color: #eee;
+  color: var(--color-primary-light);
 }
 
 .info-section-left {
@@ -117,51 +129,29 @@ body:after {
   text-align: left;
 }
 
-.hero-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 80px 30px;
-  min-height: calc(100vh - 70px); /* Adjust based on nav height */
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.hero-left, .hero-right {
-  flex: 1;
-  min-width: 300px;
-  max-width: 600px;
-  text-align: left;
-}
+/* .hero-section styles are removed as Section 2 was deleted */
 
 /* Specific styling for the quote */
 #quote {
   --weight: 10;
-  font-family: 'Marvin Visions Variable';
-  font-size: 6.5rem;
-  font-weight: 170;
+  font-family: 'Marvin Visions Variable'; /* Special font for animation */
+  font-size: 4rem;
+  font-weight: 200;
   background-size: contain;
   line-height: 0.8;
   margin: 0;
   text-align: left;
+  text-transform: uppercase;
 }
 
 #quote > * {
-  color: hsl(347, 7%, 29%); /* This color will be animated by GSAP */
+  color: var(--color-secondary-dark); /* This color will be animated by GSAP */
   font-variation-settings: 'wght' var(--weight, 10);
 }
 
-
-.hero-left h1, .hero-left h2, .hero-left p { /* Remove these styles as they are replaced by #quote */
-  /* font-size: 3em; */
-  /* color: #66ff66; */
-  /* margin-bottom: 10px; */
-}
-
-
 .hero-right h3 {
   font-size: 2em;
-  color: #66ff66; /* Acidy Green */
+  color: var(--color-accent);
   margin-bottom: 20px;
 }
 
@@ -173,16 +163,16 @@ body:after {
 .hero-right li {
   font-size: 1.2em;
   margin-bottom: 10px;
-  color: #eee;
+  color: var(--color-primary-light);
 }
 
 .nav-link-icon {
-  color: #eee;
+  color: var(--color-primary-light);
   display: none;
 }
 
 .nav-link-icon:hover {
-  color: #66ff66;
+  color: var(--color-accent);
 }
 
 .nav-svg {
@@ -222,11 +212,38 @@ body:after {
     display: inline-block;
     margin: 0 10px;
   }
+
+  #quote {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
 }
 
 .app-container {
   position: relative;
-  z-index: 1001; /* Ensure it's above body:after (999) and main-nav (1000) */
-  min-height: 100vh; /* Ensure it takes up full viewport height */
-  width: 100%; /* Ensure it takes full width */
+  z-index: 1001;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-footer {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer-logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--color-accent);
 }
