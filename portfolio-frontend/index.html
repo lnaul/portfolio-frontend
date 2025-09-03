@@ -8,5 +8,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+  <svg width="0" height="0" style="position: absolute; z-index: -1;">
+      <defs>
+        <filter id="polygon-stroke" x="-50%" y="-50%" width="200%" height="200%">
+          <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="2" />
+          <feComposite in="dilated" in2="SourceAlpha" operator="out" result="stroke" />
+          <feFlood flood-color="var(--color-accent)" result="color" />
+          <feComposite in="color" in2="stroke" operator="in" result="coloredStroke" />
+          <feMerge>
+            <feMergeNode in="coloredStroke" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+    </svg>
   </body>
 </html>

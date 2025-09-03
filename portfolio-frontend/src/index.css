@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
 
 :root {
   --color-primary-dark: #1A1A1A;
   --color-secondary-dark: #2C2C2C;
   --color-accent: #66FF66;
+  --color-accent-rgb: 102, 255, 102; /* RGB values for #66FF66 */
   --color-primary-light: #E0E0E0;
   --color-secondary-light: #A0A0A0;
 }
 
-html {
+html, body {
   box-sizing: border-box;
+  height: 100%; /* Added */
+  overflow: hidden; /* Added */
+  margin: 0; /* Ensure no default margin */
+  padding: 0; /* Ensure no default padding */
 }
 
 *, *:before, *:after {
@@ -23,15 +28,15 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-primary-dark);
   color: var(--color-primary-light);
-  min-height: 100vh;
+  min-height: 100vh; /* Keep min-height for overall layout */
   display: flex;
-  align-items: center;
-  padding: 1rem;
+  align-items: flex-start; /* Changed to flex-start to allow header to be at top */
+  padding: 0; /* Changed to 0 */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,10 +61,11 @@ body:after {
 }
 
 .main-nav {
-  position: sticky;
+  position: fixed; /* Changed from sticky to fixed */
   top: 0;
+  left: 0; /* Added */
   width: 100%;
-  background-color: var(--color-secondary-dark);
+  background-color: var(--color-primary-dark); /* Added background color */
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -73,22 +79,47 @@ body:after {
   align-items: center;
 }
 
+.logo-btn {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.logo-btn:hover {
+  background-color: rgba(var(--color-accent-rgb), 0.1);
+}
+
 .logo {
   font-size: 2em;
   font-weight: bold;
   color: var(--color-accent);
   margin-right: 5px;
+  text-transform: uppercase;
 }
 
 .portfolio-word {
   font-size: 1.2em;
   color: var(--color-primary-light);
+  text-transform: uppercase;
+}
+
+.nav-links-frame {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-secondary-dark);
+  border: 2px solid var(--color-accent);
+  border-radius: 10px;
+  padding: 10px 20px;
+  gap: 15px;
 }
 
 .nav-center a, .nav-right a {
   color: var(--color-primary-light);
   text-decoration: none;
-  margin: 0 15px;
+  /* margin: 0 15px; Removed */
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -103,19 +134,36 @@ body:after {
   padding: 8px 15px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  -webkit-clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 100% 100%, 0% 50%, 100% 0);
+  clip-path: polygon(100% 0%, 100% 50%, 100% 100%, 100% 100%, 0% 50%, 100% 0);
 }
 
 .contact-btn:hover {
   background-color: #44cc44;
 }
 
+.scroll-container {
+  height: 100vh; /* Full viewport height */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scroll-snap-type: y mandatory; /* Enable scroll snapping */
+}
+
+.page-section {
+  height: 100vh; /* Each section takes full viewport height */
+  scroll-snap-align: start; /* Snap to the start of the section */
+  display: flex; /* Use flexbox for content alignment */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack content vertically if needed */
+}
+
 .info-section {
-  min-height: 50vh;
+  /* min-height: 50vh; Removed */
+  /* padding: 50px; Removed */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  padding: 50px;
   color: var(--color-primary-light);
 }
 
@@ -127,6 +175,12 @@ body:after {
 .info-section-right {
   flex: 1;
   text-align: left;
+  background-color: rgba(44, 44, 44, 0.5); /* --color-secondary-dark with 50% opacity */
+  -webkit-clip-path: polygon(5% 0, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0 5%); /* User's original clip-path */
+  clip-path: polygon(5% 0, 95% 0%, 100% 5%, 100% 95%, 95% 100%, 5% 100%, 0% 95%, 0 5%); /* User's original clip-path */
+  backdrop-filter: blur(10px); /* Blur effect using backdrop-filter */
+  filter: url(#polygon-stroke); /* Apply SVG filter for border */
+  padding: 50px; /* Re-add a default padding, or adjust as needed */
 }
 
 /* .hero-section styles are removed as Section 2 was deleted */
@@ -221,8 +275,11 @@ body:after {
 .app-container {
   position: relative;
   z-index: 1001;
-  min-height: 100vh;
+  height: 100%; /* Changed from min-height to height */
   width: 100%;
+  display: flex; /* Added to make it a flex container */
+  flex-direction: column; /* Stack children vertically */
+  padding-top: 80px; /* Added padding to push content below fixed header */
 }
 
 .main-footer {
