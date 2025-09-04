@@ -19,50 +19,40 @@ class HoverBtn {
     this.split1 = new SplitText(this.txt, { type: "chars, words" });
     this.split2 = new SplitText(this.hoverTxt, { type: "chars, words" });
 
-    // Set initial states explicitly to avoid visibility issues
-    gsap.set(this.split1.chars, { y: 0, opacity: 1 });
-    // Set initial random position for hover text
-    gsap.set(this.split2.chars, { y: () => 30 * Math.random(), opacity: 0 });
+    // Set initial random position for hover text, mimicking original
+    gsap.set(this.split2.chars, { y: () => 30 * Math.random() });
 
     this.addListeners();
   }
 
   mouseIn() {
-    // Animate out the main text to a random y position
+    // Animate out the main text to a random y position (no stagger, per original's for loop)
     gsap.to(this.split1.chars, {
-      duration: 0.3,
+      duration: 0.5,
       y: () => -30 * Math.random(),
-      opacity: 0,
-      stagger: 0.05,
       ease: 'power2.in'
     });
-    // Animate in the hover text
+    // Animate in the hover text (with stagger, per original)
     gsap.to(this.split2.chars, {
-      duration: 0.3,
+      duration: 0.5,
       y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      ease: 'power2.out',
-      delay: 0.1
+      stagger: 0.01,
+      ease: 'power2.out'
     });
   }
 
   mouseOut() {
-    // Animate in the main text
+    // Animate in the main text (with stagger, per original)
     gsap.to(this.split1.chars, {
-      duration: 0.3,
+      duration: 0.5,
       y: 0,
-      opacity: 1,
-      stagger: 0.05,
-      ease: 'power2.out',
-      delay: 0.1
+      stagger: 0.01,
+      ease: 'power2.out'
     });
-    // Animate out the hover text to a random y position
+    // Animate out the hover text to a random y position (no stagger, per original's for loop)
     gsap.to(this.split2.chars, {
-      duration: 0.3,
+      duration: 0.5,
       y: () => 30 * Math.random(),
-      opacity: 0,
-      stagger: 0.05,
       ease: 'power2.in'
     });
   }
@@ -182,7 +172,7 @@ const PageThree = () => {
                     <a href="#" className="button js-button">
                       <span className="button__inner">
                         <span className="button__text js-button__text">Read more</span>
-                        <span className="button__hover js-button__hover">Read more</span>
+                        <span className="button__hover js-button__hover">Just click</span>
                       </span>
                     </a>
                   </div>
