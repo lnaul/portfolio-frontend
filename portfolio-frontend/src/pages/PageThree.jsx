@@ -21,16 +21,17 @@ class HoverBtn {
 
     // Set initial states explicitly to avoid visibility issues
     gsap.set(this.split1.chars, { y: 0, opacity: 1 });
-    gsap.set(this.split2.chars, { y: 30, opacity: 0 });
+    // Set initial random position for hover text
+    gsap.set(this.split2.chars, { y: () => 30 * Math.random(), opacity: 0 });
 
     this.addListeners();
   }
 
   mouseIn() {
-    // Animate out the main text
+    // Animate out the main text to a random y position
     gsap.to(this.split1.chars, {
       duration: 0.3,
-      y: -30,
+      y: () => -30 * Math.random(),
       opacity: 0,
       stagger: 0.05,
       ease: 'power2.in'
@@ -56,10 +57,10 @@ class HoverBtn {
       ease: 'power2.out',
       delay: 0.1
     });
-    // Animate out the hover text
+    // Animate out the hover text to a random y position
     gsap.to(this.split2.chars, {
       duration: 0.3,
-      y: 30,
+      y: () => 30 * Math.random(),
       opacity: 0,
       stagger: 0.05,
       ease: 'power2.in'
