@@ -1,16 +1,95 @@
-
 import React, { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import './PageThree.css';
+
+// Per your request, this is a fresh implementation based on the original code provided.
+// It has been adapted to work within a React component and with the modern GSAP v3 library.
+
+class HoverBtn {
+  constructor(el) {
+    this.btn = el;
+    this.txt = this.btn.querySelector(".js-button__text");
+    this.hoverTxt = this.btn.querySelector(".js-button__hover");
+    
+    // Bind methods for event listeners
+    this.mouseIn = this.mouseIn.bind(this);
+    this.mouseOut = this.mouseOut.bind(this);
+
+    // Split the text into characters
+    this.split1 = new SplitText(this.txt, { type: "chars, words" });
+    this.split2 = new SplitText(this.hoverTxt, { type: "chars, words" });
+
+    // Set initial states explicitly to avoid visibility issues
+    gsap.set(this.split1.chars, { y: 0, opacity: 1 });
+    gsap.set(this.split2.chars, { y: 30, opacity: 0 });
+
+    this.addListeners();
+  }
+
+  mouseIn() {
+    // Animate out the main text
+    gsap.to(this.split1.chars, {
+      duration: 0.3,
+      y: -30,
+      opacity: 0,
+      stagger: 0.05,
+      ease: 'power2.in'
+    });
+    // Animate in the hover text
+    gsap.to(this.split2.chars, {
+      duration: 0.3,
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      ease: 'power2.out',
+      delay: 0.1
+    });
+  }
+
+  mouseOut() {
+    // Animate in the main text
+    gsap.to(this.split1.chars, {
+      duration: 0.3,
+      y: 0,
+      opacity: 1,
+      stagger: 0.05,
+      ease: 'power2.out',
+      delay: 0.1
+    });
+    // Animate out the hover text
+    gsap.to(this.split2.chars, {
+      duration: 0.3,
+      y: 30,
+      opacity: 0,
+      stagger: 0.05,
+      ease: 'power2.in'
+    });
+  }
+
+  addListeners() {
+    this.btn.addEventListener("mouseenter", this.mouseIn);
+    this.btn.addEventListener("mouseleave", this.mouseOut);
+  }
+
+  // Method to clean up listeners and animations
+  destroy() {
+    this.btn.removeEventListener("mouseenter", this.mouseIn);
+    this.btn.removeEventListener("mouseleave", this.mouseOut);
+    this.split1.revert();
+    this.split2.revert();
+    gsap.killTweensOf(this.split1.chars);
+    gsap.killTweensOf(this.split2.chars);
+  }
+}
 
 const PageThree = () => {
   const componentRef = useRef(null);
 
   useEffect(() => {
     const component = componentRef.current;
-
     gsap.registerPlugin(Observer, SplitText);
 
+    // --- Main Page Scroll Logic --- 
     let sections = component.querySelectorAll("section"),
       images = component.querySelectorAll(".bg"),
       headings = gsap.utils.toArray(component.querySelectorAll(".section-heading")),
@@ -25,7 +104,7 @@ const PageThree = () => {
     gsap.set(innerWrappers, { yPercent: -100 });
 
     function gotoSection(index, direction) {
-      index = wrap(index); // make sure it's valid
+      index = wrap(index);
       animating = true;
       let fromTop = direction === -1,
           dFactor = fromTop ? -1 : 1,
@@ -34,7 +113,6 @@ const PageThree = () => {
             onComplete: () => animating = false
           });
       if (currentIndex >= 0) {
-        // The first time this function runs, current is -1
         gsap.set(sections[currentIndex], { zIndex: 0 });
         tl.to(images[currentIndex], { yPercent: -15 * dFactor })
           .set(sections[currentIndex], { autoAlpha: 0 });
@@ -54,17 +132,13 @@ const PageThree = () => {
             yPercent: 0,
             duration: 1,
             ease: "power2",
-            stagger: {
-              each: 0.02,
-              from: "random"
-            }
+            stagger: { each: 0.02, from: "random" }
           }, 0.2);
-
       currentIndex = index;
     }
 
     const observer = Observer.create({
-      target: component, // Correctly target the component
+      target: component,
       type: "wheel,touch,pointer",
       wheelSpeed: -1,
       onDown: () => !animating && gotoSection(currentIndex - 1, -1),
@@ -74,9 +148,17 @@ const PageThree = () => {
     });
 
     gotoSection(0, 1);
+    // --- End of Main Page Scroll Logic ---
+
+    // --- Button Animation Logic ---
+    const buttons = component.querySelectorAll('.js-button');
+    const buttonInstances = Array.from(buttons).map(el => new HoverBtn(el));
+
+    // Cleanup function to run when the component unmounts
     return () => {
       observer.kill();
       splitHeadings.forEach(s => s.revert());
+      buttonInstances.forEach(instance => instance.destroy());
     };
   }, []);
 
@@ -84,47 +166,64 @@ const PageThree = () => {
     <>
       <Header />
       <div ref={componentRef} className="section-three-container">
-        <section class="first">
-          <div class="outer">
-            <div class="inner">
-              <div class="bg one">
-                <h2 class="section-heading">Scroll down</h2>
+        <section className="first">
+          <div className="outer">
+            <div className="inner">
+              <div className="bg one">
+                <div className="columns-container">
+                  <div className="column-left">
+                    <p>This is the left column with a black background. Some text content can go here.</p>
+                  </div>
+                  <div className="column-right">
+                    <div className="gif-placeholder">
+                      <span>GIF</span>
+                    </div>
+                    <a href="#" className="button js-button">
+                      <span className="button__inner">
+                        <span className="button__text js-button__text">Read more</span>
+                        <span className="button__hover js-button__hover">Read more</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <h2 className="section-heading">Scroll down</h2>
               </div>
             </div>
           </div>
         </section>
-        <section class="second">
-          <div class="outer">
-            <div class="inner">
-              <div class="bg">
-                <h2 class="section-heading">Animated with GSAP</h2>
+        {/* ... other sections ... */}
+         <section className="second">
+          <div className="outer">
+            <div className="inner">
+              <div className="bg">
+                <h2 className="section-heading">Animated with GSAP</h2>
               </div>
             </div>
           </div>
         </section>
-        <section class="third">
-          <div class="outer">
-            <div class="inner">
-              <div class="bg">
-                <h2 class="section-heading">GreenSock</h2>
+        <section className="third">
+          <div className="outer">
+            <div className="inner">
+              <div className="bg">
+                <h2 className="section-heading">GreenSock</h2>
               </div>
             </div>
           </div>
         </section>
-        <section class="fourth">
-          <div class="outer">
-            <div class="inner">
-              <div class="bg">
-                <h2 class="section-heading">Animation platform</h2>
+        <section className="fourth">
+          <div className="outer">
+            <div className="inner">
+              <div className="bg">
+                <h2 className="section-heading">Animation platform</h2>
               </div>
             </div>
           </div>
         </section>
-        <section class="fifth">
-          <div class="outer">
-            <div class="inner">
-              <div class="bg">
-                <h2 class="section-heading">Keep scrolling</h2>
+        <section className="fifth">
+          <div className="outer">
+            <div className="inner">
+              <div className="bg">
+                <h2 className="section-heading">Keep scrolling</h2>
               </div>
             </div>
           </div>
