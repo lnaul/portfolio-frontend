@@ -127,9 +127,11 @@
 
 .column-right {
   /*background-color: rgba(26, 26, 26, 0.8); /* Primary Dark with transparency */
-  backdrop-filter: blur(10px);
-  /*border: 1px solid rgba(255, 255, 255, 0.1);*/
-  color: #E0E0E0;
+  /*backdrop-filter: blur(10px);*/
+  border: 1px solid #66ff6680;
+  box-shadow:  0 0 20px #66ff6680;
+  border-radius: 10px;
+  /*color: #E0E0E0;*/
   align-items: center;
   justify-content: space-between;
 }
@@ -187,12 +189,12 @@ a.button, a.btn {
 	border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 	position: relative;
-	background-color: #fff;
+	background-color: #000;
 	border: 0;
 	line-height: 3.5rem;
 	white-space: nowrap;
 	padding: 0 3rem;
-	color: #000;
+	color: #66ff66;
 	font-size: 30px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -246,7 +248,7 @@ a.button, a.btn {
 			width: 100%;
 			-webkit-transform: translateY(40px);
 			transform: translateY(40px);
-			color: #fff;
+			color: #000;
       font-size: 30px;
 		}
 	}
@@ -254,7 +256,7 @@ a.button, a.btn {
 	&:after {
 		content: '';
 		display: block;
-		background: #000;
+		background: #66ff66;
 		position: absolute;
 		left: 0;
 		top: 0;
