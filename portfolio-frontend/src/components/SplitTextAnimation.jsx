@@ -27,7 +27,7 @@ function SplitTextAnimation() {
   }, []);
 
   return (
-    <div style={{ padding: '0px', textAlign: 'center', backgroundColor: 'transparent', color: 'var(--color-primary-light)' }}> {/* Updated color */}
+    <div className="split-text-animation-wrapper" style={{ padding: '0px', textAlign: 'center', backgroundColor: 'transparent', color: 'var(--color-primary-light)' }}> {/* Updated color */}
       <h2 id="quote" style={{
         // Removed fontFamily inline style
         // Removed fontSize

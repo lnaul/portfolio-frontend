@@ -20,7 +20,7 @@ class HoverBtn {
     this.split2 = new SplitText(this.hoverTxt, { type: "chars, words" });
 
     // Set initial random position for hover text, mimicking original
-    gsap.set(this.split2.chars, { y: () => 30 * Math.random() });
+    gsap.set(this.split2.chars, { y: () => 60 * Math.random() });
 
     this.addListeners();
   }
@@ -29,7 +29,7 @@ class HoverBtn {
     // Animate out the main text to a random y position (no stagger, per original's for loop)
     gsap.to(this.split1.chars, {
       duration: 0.5,
-      y: () => -30 * Math.random(),
+      y: () => -60 * Math.random(),
       ease: 'power2.in'
     });
     // Animate in the hover text (with stagger, per original)
@@ -52,7 +52,7 @@ class HoverBtn {
     // Animate out the hover text to a random y position (no stagger, per original's for loop)
     gsap.to(this.split2.chars, {
       duration: 0.5,
-      y: () => 30 * Math.random(),
+      y: () => 60 * Math.random(),
       ease: 'power2.in'
     });
   }
@@ -167,7 +167,7 @@ const PageThree = () => {
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
-                      <span>GIF</span>
+                      <img src="/gifs/bubblegum-crisis-cyberpunk-anime.gif" alt="Cyberpunk Anime GIF" className="gif-element" />
                     </div>
                     <a href="#" className="button js-button">
                       <span className="button__inner">
