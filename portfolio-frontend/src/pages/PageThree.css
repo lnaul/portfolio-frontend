@@ -23,7 +23,7 @@
 }
 
 .section-three-container h2 {
-  font-size: clamp(2rem, 3vw, 4rem); /* Consolidated to desired smaller size */
+  font-size: clamp(2rem, 5vw, 6rem); /* Made bigger */
   font-weight: 600;
   margin-right: -0.5em;
   text-transform: none;
@@ -120,7 +120,7 @@
 
 .column-left {
   padding: 20px;
-  background-color: rgba(26, 26, 26, 0.8); /* Primary Dark with transparency */
+  background-color: transparent;
   backdrop-filter: blur(10px); /* Frosted glass effect */
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
