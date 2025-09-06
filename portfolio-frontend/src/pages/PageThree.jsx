@@ -20,7 +20,7 @@ class HoverBtn {
     this.split2 = new SplitText(this.hoverTxt, { type: "chars, words" });
 
     // Set initial random position for hover text, mimicking original
-    gsap.set(this.split2.chars, { y: () => 60 * Math.random() });
+    gsap.set(this.split2.chars, { y: () => 200 * Math.random() });
 
     this.addListeners();
   }
@@ -29,7 +29,7 @@ class HoverBtn {
     // Animate out the main text to a random y position (no stagger, per original's for loop)
     gsap.to(this.split1.chars, {
       duration: 0.5,
-      y: () => -60 * Math.random(),
+      y: () => -200 * Math.random(),
       ease: 'power2.in'
     });
     // Animate in the hover text (with stagger, per original)
@@ -52,7 +52,7 @@ class HoverBtn {
     // Animate out the hover text to a random y position (no stagger, per original's for loop)
     gsap.to(this.split2.chars, {
       duration: 0.5,
-      y: () => 60 * Math.random(),
+      y: () => 200 * Math.random(),
       ease: 'power2.in'
     });
   }
@@ -163,7 +163,8 @@ const PageThree = () => {
               <div className="bg one">
                 <div className="columns-container">
                   <div className="column-left">
-                    <p>This is the left column with a black background. Some text content can go here.</p>
+                    <h2 className="section-heading web-development-heading">Web Development</h2>
+                    <p className="web-development-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
@@ -177,7 +178,10 @@ const PageThree = () => {
                     </a>
                   </div>
                 </div>
-                <h2 className="section-heading">Scroll down</h2>
+                <div className="new-columns-container">
+                  <div className="new-column-1"></div>
+                  <div className="new-column-2"></div>
+                </div>
               </div>
             </div>
           </div>
