@@ -69,7 +69,7 @@ class HoverBtn {
     this.split1.revert();
     this.split2.revert();
     gsap.killTweensOf(this.split1.chars);
-    gsap.killTweansOf(this.split2.chars);
+    gsap.killTweensOf(this.split2.chars);
   }
 }
 
