@@ -295,3 +295,7 @@ a.button, a.btn {
   left: 0;
   color: #000;
 }
+
+.orange-filter {
+  filter: sepia(100%) hue-rotate(-30deg) saturate(5);
+}

@@ -69,7 +69,7 @@ class HoverBtn {
     this.split1.revert();
     this.split2.revert();
     gsap.killTweensOf(this.split1.chars);
-    gsap.killTweensOf(this.split2.chars);
+    gsap.killTweansOf(this.split2.chars);
   }
 }
 
@@ -168,7 +168,7 @@ const PageThree = () => {
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
-                      <img src="/gifs/90S Illustration.gif" alt="90s Illustration GIF" className="gif-element" />
+                      <img src="/gifs/giphy-16.webp" alt="giphy-16" className="gif-element orange-filter" />
                     </div>
                     <a href="#" className="button js-button">
                       <span className="button__inner">
