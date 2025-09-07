@@ -168,7 +168,7 @@ const PageThree = () => {
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
-                      <img src="/gifs/bubblegum-crisis-cyberpunk-anime.gif" alt="Cyberpunk Anime GIF" className="gif-element" />
+                      <img src="/gifs/90S Illustration.gif" alt="90s Illustration GIF" className="gif-element" />
                     </div>
                     <a href="#" className="button js-button">
                       <span className="button__inner">

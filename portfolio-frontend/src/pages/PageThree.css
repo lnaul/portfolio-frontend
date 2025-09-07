@@ -112,13 +112,13 @@
 }
 
 .column-left, .column-right {
-  flex: 1;
   border-radius: 0px;
   /*display: flex;
   flex-direction: column;*/
 }
 
 .column-left {
+  flex: 2;
   padding: 20px;
   background-color: transparent;
   /* backdrop-filter: blur(10px); /* Frosted glass effect */ 
@@ -126,6 +126,7 @@
 }
 
 .column-right {
+  flex: 1;
   /*background-color: rgba(26, 26, 26, 0.8); /* Primary Dark with transparency */
   /*backdrop-filter: blur(10px);*/
   border: 1px solid #66ff6680;
