@@ -112,7 +112,7 @@
 }
 
 .column-left, .column-right {
-  border-radius: 0px;
+  border-radius: 25px;
   /*display: flex;
   flex-direction: column;*/
 }
@@ -129,12 +129,13 @@
   flex: 1;
   /*background-color: rgba(26, 26, 26, 0.8); /* Primary Dark with transparency */
   /*backdrop-filter: blur(10px);*/
-  border: 1px solid #66ff6680;
-  box-shadow:  0 0 20px #66ff6680;
-  border-radius: 10px;
+  /*border: 10px solid #fb860080;*/
+  
+  border-radius: 25px;
   /*color: #E0E0E0;*/
   align-items: center;
   justify-content: space-between;
+  box-shadow:  0 0 25px #fb850080;
 }
 
 .gif-placeholder {
@@ -143,15 +144,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  
+  border-radius: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   overflow: hidden; /* To keep the video within the rounded corners */
+  margin-bottom: 0px;
 }
 
 .gif-element {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  box-shadow:  0 0 0px #fb8500;
+  border: solid 0px #fb8500;
 }
 
 .web-development-heading {
@@ -187,15 +196,16 @@ a.button, a.btn {
 	outline: 0;
 	text-decoration: none;
 	vertical-align: middle;
-	border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  
 	position: relative;
-	background-color: #000;
-	border: 0;
+	background-color: #202020;
+	border: solid 2px #fb8500;
 	line-height: 3.5rem;
 	white-space: nowrap;
 	padding: 0 3rem;
-	color: #66ff66;
+	color: #fb8500;
 	font-size: 30px;
 	text-transform: uppercase;
 	font-weight: 700;
@@ -203,6 +213,8 @@ a.button, a.btn {
 	overflow: hidden;
 	letter-spacing: 2px;
   height: 20%;
+  margin-top: 0px;
+  
 
 	&:hover {
 
@@ -249,7 +261,7 @@ a.button, a.btn {
 			width: 100%;
 			-webkit-transform: translateY(40px);
 			transform: translateY(40px);
-			color: #000;
+			color: #202020;
       font-size: 30px;
 		}
 	}
@@ -257,7 +269,7 @@ a.button, a.btn {
 	&:after {
 		content: '';
 		display: block;
-		background: #66ff66;
+		background: #fb8500;
 		position: absolute;
 		left: 0;
 		top: 0;
