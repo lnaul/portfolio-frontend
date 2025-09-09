@@ -105,10 +105,11 @@
   gap: 20px;
   width: 90%; /* Consolidated to desired 100% */
   height: 60vh; /* Consolidated to desired 80vh */
-  z-index: 10;
+ 
   color: #E0E0E0; /* Primary Light for text */
   font-family: 'Fira Sans', sans-serif; /* Body text font */
   text-transform: none; /* Normal text transform */
+  
 }
 
 .column-left, .column-right {
@@ -201,7 +202,9 @@ a.button, a.btn {
   
 	position: relative;
 	background-color: #202020;
-	border: solid 2px #fb8500;
+	border-bottom: solid 1px #fb8500;
+  border-right: solid 1px #fb8500;
+  border-left: solid 1px #fb8500;
 	line-height: 3.5rem;
 	white-space: nowrap;
 	padding: 0 3rem;
