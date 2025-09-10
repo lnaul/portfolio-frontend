@@ -55,7 +55,7 @@ body:before {
     right: 0;
     z-index: 4;
     pointer-events: none;
-    opacity: 0.03;
+    opacity: 0.025;
     filter: invert(0);
     background-size: cover;
     animation: scale-and-move 30s ease-in-out infinite alternate;
@@ -309,12 +309,12 @@ body:before {
 
 @keyframes scale-and-move {
   0% {
-    transform: scale(1.175) translateX(0) rotate(30deg);
+    transform: scale(1.1) translateX(0) rotate(15deg);
   }
   50% {
     transform: scale(1) translateX(0) rotate(0deg);
   }
     100% {
-    transform: scale(1.175) translateX(0) rotate(-30deg);
+    transform: scale(1.1) translateX(0) rotate(-15deg);
   }
 }
