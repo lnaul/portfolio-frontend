@@ -55,7 +55,7 @@ body:before {
     right: 0;
     z-index: 4;
     pointer-events: none;
-    opacity: 0.025;
+    opacity: 0.03;
     filter: invert(0);
     background-size: cover;
     animation: scale-and-move 30s ease-in-out infinite alternate;

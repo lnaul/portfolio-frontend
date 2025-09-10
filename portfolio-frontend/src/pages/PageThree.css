@@ -182,7 +182,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   box-shadow:  0 0 0px #fb8500;
-  border: solid 0px #fb8500;
+  border-top: solid 2px #fb8500;
 }
 
 .web-development-heading {
@@ -224,8 +224,8 @@ a.button, a.btn {
 	position: relative;
 	background-color: #202020;
 	border-bottom: solid 1px #fb8500;
-  border-right: solid 1px #fb8500;
-  border-left: solid 1px #fb8500;
+  border-right: solid 0px #fb8500;
+  border-left: solid 0px #fb8500;
 	line-height: 3.5rem;
 	white-space: nowrap;
 	padding: 0 3rem;
