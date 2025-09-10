@@ -2,7 +2,7 @@
   --bg-gradient: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.1) 100%
+    rgba(0, 0, 0, 0.8) 100%
   );
   margin: 0;
   padding: 0;
@@ -54,10 +54,11 @@
   top: 0;
   background-size: cover;
   background-position: center;
+  isolation: isolate;
 }
 
 .section-three-container section .bg h2 {
-  z-index: 2; /* Adjusted z-index */
+  z-index: 2;
 }
 
 .section-three-container section .bg .clip-text {
@@ -65,8 +66,26 @@
 }
 
 .section-three-container .first .bg {
+  /* background handled by ::after */
+}
+
+.section-three-container .first .bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: var(--bg-gradient),
-    url("https://assets.codepen.io/16327/site-landscape-1.jpg");
+    url("/bg-01.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scaleX(-1);
+  transform: scaleY(-1);
+  z-index: -1;
+  opacity: 0.5;
+  animation: slow-scale 30s ease infinite alternate;
+  
 }
 
 .section-three-container .second .bg {
@@ -105,7 +124,7 @@
   gap: 20px;
   width: 90%; /* Consolidated to desired 100% */
   height: 60vh; /* Consolidated to desired 80vh */
- 
+  z-index: 2;
   color: #E0E0E0; /* Primary Light for text */
   font-family: 'Fira Sans', sans-serif; /* Body text font */
   text-transform: none; /* Normal text transform */
@@ -132,11 +151,11 @@
   /*backdrop-filter: blur(10px);*/
   /*border: 10px solid #fb860080;*/
   
-  border-radius: 25px;
+  border-radius: 40px;
   /*color: #E0E0E0;*/
   align-items: center;
   justify-content: space-between;
-  box-shadow:  0 0 25px #fb850080;
+  box-shadow:  0px 0 80px 0px #fb860080;
 }
 
 .gif-placeholder {
@@ -145,6 +164,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 5;
   
   border-radius: 0px;
   border-top-left-radius: 0px;
@@ -158,8 +179,8 @@
   height: 100%;
   object-fit: cover;
   
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   box-shadow:  0 0 0px #fb8500;
   border: solid 0px #fb8500;
 }
@@ -197,8 +218,8 @@ a.button, a.btn {
 	outline: 0;
 	text-decoration: none;
 	vertical-align: middle;
-	border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   
 	position: relative;
 	background-color: #202020;
@@ -313,4 +334,16 @@ a.button, a.btn {
 
 .orange-filter {
   filter: sepia(100%) hue-rotate(-30deg) saturate(5);
+}
+
+@keyframes slow-scale {
+  0% {
+    transform: scale(1) scaleX(1) scaleY(-1) translateX(0);
+  }
+  50% {
+    transform: scale(1.175) scaleX(1) scaleY(-1) translateX(100px);
+  }
+  100% {
+    transform: scale(1) scaleX(1) scaleY(-1) translateX(0);
+  }
 }

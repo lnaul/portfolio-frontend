@@ -108,7 +108,7 @@ const PageThree = () => {
         tl.to(images[currentIndex], { yPercent: -15 * dFactor })
           .set(sections[currentIndex], { autoAlpha: 0 });
       }
-      gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
+      gsap.set(sections[index], { autoAlpha: 1, zIndex: 3 });
       tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
           yPercent: i => i ? -100 * dFactor : 100 * dFactor
         }, { 
