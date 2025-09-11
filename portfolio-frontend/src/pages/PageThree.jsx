@@ -108,7 +108,7 @@ const PageThree = () => {
         tl.to(images[currentIndex], { yPercent: -15 * dFactor })
           .set(sections[currentIndex], { autoAlpha: 0 });
       }
-      gsap.set(sections[index], { autoAlpha: 1, zIndex: 3 });
+      gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
       tl.fromTo([outerWrappers[index], innerWrappers[index]], { 
           yPercent: i => i ? -100 * dFactor : 100 * dFactor
         }, { 
@@ -168,7 +168,7 @@ const PageThree = () => {
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
-                      <img src="/gifs/giphy-16.webp" alt="giphy-16" className="gif-element orange-filter" />
+                      <img src="/gifs/gif-21.webp" alt="gif-21" className="gif-element" />
                     </div>
                     <a href="#" className="button js-button">
                       <span className="button__inner">

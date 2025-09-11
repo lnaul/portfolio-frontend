@@ -1,8 +1,8 @@
 .section-three-container {
   --bg-gradient: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.85) 100%
   );
   margin: 0;
   padding: 0;
@@ -83,9 +83,20 @@
   transform: scaleX(-1);
   transform: scaleY(-1);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.75;
   animation: slow-scale 30s ease infinite alternate;
   
+}
+
+.section-three-container .first .bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -2;
 }
 
 .section-three-container .second .bg {
@@ -155,7 +166,7 @@
   /*color: #E0E0E0;*/
   align-items: center;
   justify-content: space-between;
-  box-shadow:  0px 0 20px 0px #fb860080;
+  box-shadow:  0px 0 4px 0px #fb860080;
 }
 
 .gif-placeholder {
@@ -166,12 +177,28 @@
   align-items: center;
   position: relative;
   z-index: 5;
-  
+  border-top: solid 1px #fb8500;
   border-radius: 0px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  overflow: hidden; /* To keep the video within the rounded corners */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /*overflow: hidden; /* To keep the video within the rounded corners */
   margin-bottom: 0px;
+}
+
+.gif-placeholder::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fb8500;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .gif-element {
@@ -181,8 +208,12 @@
   
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   box-shadow:  0 0 0px #fb8500;
-  border-top: solid 2px #fb8500;
+  border-left: solid 0px #fb8500;
+  border-top: solid 0px #fb8500;
+  
 }
 
 .web-development-heading {
@@ -220,12 +251,14 @@ a.button, a.btn {
 	vertical-align: middle;
 	border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   
 	position: relative;
 	background-color: #202020;
-	border-bottom: solid 1px #fb8500;
+	border-bottom: solid 1px #fb8600;
+  border-top: solid 0px #fb860080;
   border-right: solid 0px #fb8500;
-  border-left: solid 0px #fb8500;
 	line-height: 3.5rem;
 	white-space: nowrap;
 	padding: 0 3rem;
@@ -333,7 +366,9 @@ a.button, a.btn {
 }
 
 .orange-filter {
+  
   filter: sepia(100%) hue-rotate(-30deg) saturate(5);
+  
 }
 
 @keyframes slow-scale {
@@ -341,7 +376,7 @@ a.button, a.btn {
     transform: scale(1) scaleX(1) scaleY(-1) translateX(0);
   }
   50% {
-    transform: scale(1.1) scaleX(1) scaleY(-1) translateX(50px);
+    transform: scale(1.15) scaleX(1) scaleY(-1) translateX(80px);
   }
   100% {
     transform: scale(1) scaleX(1) scaleY(-1) translateX(0);
