@@ -42,9 +42,9 @@ const CustomCursor = () => {
           const pulse = Math.sin(time - i * 0.4) * 0.1; // Wave effect
           let targetScale = baseScale + pulse;
 
-          // Main circle click effect
-          if (i === 0 && isClickedRef.current) {
-            targetScale = 0.5;
+          // Click effect for all circles
+          if (isClickedRef.current) {
+            targetScale = baseScale * 0.5; // Expand each circle
           }
           
           const baseBorderWidth = isClickedRef.current ? 4 : 2;
