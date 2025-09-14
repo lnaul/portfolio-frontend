@@ -50,7 +50,7 @@ const CustomCursor = () => {
           const baseBorderWidth = isClickedRef.current ? 4 : 2;
 
           currentCircle.style.transform = `translate(-50%, -50%) scale(${targetScale})`;
-          currentCircle.style.opacity = 1;
+          currentCircle.style.opacity = 0.5;
           currentCircle.style.borderWidth = `${baseBorderWidth / baseScale}px`;
         }
 

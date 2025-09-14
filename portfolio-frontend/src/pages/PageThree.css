@@ -65,9 +65,7 @@
   overflow: hidden;
 }
 
-.section-three-container .first .bg {
-  /* background handled by ::after */
-}
+
 
 .section-three-container .first .bg::after {
   content: '';

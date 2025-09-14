@@ -7,9 +7,6 @@ import GamepadIcon from './icons/GamepadIcon';
 const Header = () => {
   return (
     <nav className="main-nav">
-      <div className="nav-left">
-        <Link to="/" className="logo-btn"><span className="logo">Dee</span></Link>
-      </div>
       <div className="nav-center">
         <div className="nav-links-frame">
           <a href="/#page-2" className="nav-link-text">Web Dev</a>
@@ -21,9 +18,6 @@ const Header = () => {
           <a href="/#page-1" className="nav-button">1</a>
           <Link to="/scroll" className="nav-button">Scroll</Link>
         </div>
-      </div>
-      <div className="nav-right">
-        <a href="/#page-5" className="contact-btn">Contact</a>
       </div>
     </nav>
   );
