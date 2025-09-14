@@ -15,7 +15,7 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 9999;
-  box-shadow: 0 0 0px 2px black;
+  box-shadow: 0 0 0px 2px #242424;
 }
 
 .cursor-circle {
@@ -30,7 +30,7 @@
   pointer-events: none;
   z-index: 9999;
   transition: transform 0.3s ease, border-width 0.2s ease;
-  box-shadow: 0 0 0px 3px black;
+  box-shadow: 0 0 0px 3px #242424;
 }
 
 .cursor-circle.hover {

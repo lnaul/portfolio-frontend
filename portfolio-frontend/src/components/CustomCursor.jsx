@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './CustomCursor.css';
 
 const NUM_CIRCLES = 3;
-const EASING = 0.15;
+const EASING = 0.3;
 
 const CustomCursor = () => {
   const dotRef = useRef(null);

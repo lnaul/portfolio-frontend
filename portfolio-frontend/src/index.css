@@ -55,10 +55,18 @@ body:before {
     right: 0;
     z-index: 4;
     pointer-events: none;
-    opacity: 0.025;
-    filter: invert(0) sepia(100%) hue-rotate(-30deg) saturate(5);
+    opacity: 0.05;
+    /*filter: invert(0) sepia(100%) hue-rotate(-30deg) saturate(5);*/
     background-size: cover;
-    animation: scale-and-move 30s ease-in-out infinite alternate;
+    animation: scale-and-move 30s ease-in-out infinite alternate, flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.05; }
+
+  50% { opacity: 0.04; }
+  
+  100% { opacity: 0.05; }
 }
 
 .main-nav {
@@ -308,12 +316,12 @@ body:before {
 
 @keyframes scale-and-move {
   0% {
-    transform: scale(1.4) translateX(0) rotate(15deg);
+    transform: scale(1.8) translateX(0) rotate(30deg);
   }
   50% {
     transform: scale(1) translateX(0) rotate(0deg);
   }
     100% {
-    transform: scale(1.4) translateX(0) rotate(-15deg);
+    transform: scale(1.8) translateX(0) rotate(-30deg);
   }
 }
