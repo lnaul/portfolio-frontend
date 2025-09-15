@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <nav className="main-footer">
       <div className="nav-center">
-        <div className="nav-links-frame">
+        <div className="footer-links-frame">
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="nav-link-text">LinkedIn</a>
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="nav-link-icon"><LinkedinIcon /></a>
           <a href="mailto:example@example.com" className="nav-link-text">Email</a>
