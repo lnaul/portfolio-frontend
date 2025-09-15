@@ -384,3 +384,52 @@ a.button, a.btn {
     transform: scale(1) scaleX(1) scaleY(-1) translateX(0);
   }
 }
+
+@keyframes slow-scale-mobile {
+  0% {
+    transform: scale(1) scaleX(1) scaleY(-1) translateX(0);
+  }
+  50% {
+    transform: scale(1.15) scaleX(1) scaleY(-1) translateX(30px);
+  }
+  100% {
+    transform: scale(1) scaleX(1) scaleY(-1) translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-three-container .first .bg::after {
+    animation-name: slow-scale-mobile;
+  }
+
+  .columns-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .column-left, .column-right {
+    flex-basis: auto;
+  }
+
+  .column-left {
+    margin-bottom: 20px;
+  }
+
+  .column-right {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+  }
+
+  .gif-placeholder {
+    height: 300px;
+    
+    
+  }
+
+  a.button, a.btn {
+    height: 80px;
+    
+
+  }
+}

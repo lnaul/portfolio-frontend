@@ -172,8 +172,8 @@ const PageThree = () => {
                     </div>
                     <a href="#" className="button js-button">
                       <span className="button__inner">
-                        <span className="button__text js-button__text">Read more</span>
-                        <span className="button__hover js-button__hover">Just click</span>
+                        <span className="button__text js-button__text">Start to Explore</span>
+                        <span className="button__hover js-button__hover">Just one simple click</span>
                       </span>
                     </a>
                   </div>
