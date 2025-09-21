@@ -1,0 +1,44 @@
+.developer-button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1003;
+}
+
+.developer-button {
+  background-color: rgba(44, 44, 44, 0.7);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.developer-button:hover {
+  background-color: rgba(102, 255, 102, 0.3);
+  transform: scale(1.1);
+}
+
+.developer-logo-svg {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px 0px rgba(102, 255, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px 5px rgba(102, 255, 102, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px 0px rgba(102, 255, 102, 0.5);
+  }
+}
