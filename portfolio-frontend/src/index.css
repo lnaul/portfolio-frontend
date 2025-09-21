@@ -115,16 +115,16 @@ body:before {
   
   display: flex;
   align-items: center;
-  background-color: rgb(25, 25, 25, 0.5);
+  background-color: rgb(25, 25, 25, 0.0);
   border-right: 0px solid #fb8500;
-  border-bottom: 2px solid #fb8500;
+  border-bottom: 0px solid #fb8500;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  padding: 10px 20px;
+  padding: 30px 20px;
   gap: 15px;
   text-transform: uppercase;
-  backdrop-filter: blur(10px);
-  box-shadow:0 0 10px 0 #fb860080;
+  backdrop-filter: blur(0px);
+  box-shadow:0 0 0px 0 #fb860080;
 }
 
 .footer-links-frame {
@@ -135,8 +135,8 @@ body:before {
 
 .footer-icon-button {
   background-color: rgba(44, 44, 44, 0.7);
-  border: 1px solid rgb(200, 200, 200);
-  color: rgb(200, 200, 200);
+  border: 1px solid #fb8500;
+  color: #fb8500;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -146,6 +146,7 @@ body:before {
   backdrop-filter: blur(5px);
   transition: all 0.3s ease;
   text-decoration: none; /* Ensure no underline */
+  outline: none;
 }
 
 .footer-icon-button:hover {
@@ -163,8 +164,8 @@ body:before {
 
 .logo-link {
   color: white !important;
-  border-left: 2px solid #fb8500;
-  border-right: 2px solid #fb8500;
+  border-left: 0px solid #fb8500;
+  border-right: 0px solid #fb8500;
   border-radius: 5px;
   text-transform: none;
   padding: 0 10px; /* Add some padding to make space for the borders */

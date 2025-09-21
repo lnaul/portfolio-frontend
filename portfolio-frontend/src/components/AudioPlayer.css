@@ -7,8 +7,8 @@
 
 .control-button {
   background-color: rgba(44, 44, 44, 0.7);
-  border: 1px solid #66FF66;
-  color: #66FF66;
+  border: 1px solid #fb8500;
+  color: #fb8500;
   cursor: pointer;
   border-radius: 50%;
   width: 50px;
@@ -18,10 +18,11 @@
   align-items: center;
   backdrop-filter: blur(5px);
   transition: background-color 0.3s ease;
+  outline: none;
 }
 
 .control-button:hover {
-  background-color: rgba(102, 255, 102, 0.3);
+  background-color: rgba(251, 133, 0, 0.3);
 }
 
 .control-button svg {
@@ -32,13 +33,13 @@
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 5px 0px rgba(102, 255, 102, 0.5);
+    box-shadow: 0 0 5px 0px rgba(251, 133, 0, 0.5);
   }
   50% {
-    box-shadow: 0 0 10px 5px rgba(102, 255, 102, 0.8);
+    box-shadow: 0 0 10px 5px rgba(251, 133, 0, 0.8);
   }
   100% {
-    box-shadow: 0 0 5px 0px rgba(102, 255, 102, 0.5);
+    box-shadow: 0 0 5px 0px rgba(251, 133, 0, 0.5);
   }
 }
 

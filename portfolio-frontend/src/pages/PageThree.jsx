@@ -163,8 +163,10 @@ const PageThree = () => {
               <div className="bg one">
                 <div className="columns-container">
                   <div className="column-left">
-                    <h2 className="section-heading web-development-heading">Web Development</h2>
-                    <p className="web-development-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <h2 className="section-heading web-development-heading">Dee-lighted to Meet You.</h2>
+                    <p className="web-development-text">Hello, World! I'm Dmitry Naumov (aka Dee), a Senior UX/UI Designer & Developer. My story begins with a nickname I picked up while living in Thailand-'Dee,' which means 'Good' in Thai. It became a daily reminder for the standard I set in my work, and when I started building a career turning good ideas into great digital experiences, calling myself the 'Dee-veloper' was a no-brainer. It's a little cheesy, a lot of fun, and it keeps me focused on making good stuff.</p>
+                    <p className="web-development-text">My focus is on crafting seamless digital experiences for web, mobile, and interactive games. I love diving into the whole journey—from user research and Figma prototyping to front-end development and game creation. My toolkit spans the complete spectrum, from the first spark of an idea to the final, polished product.</p>
+                    <p className="web-development-text">You're looking at my biggest project right now—this portfolio! It's a living example of my work, so click around and have some fun with it. If you've got a cool project, a wild idea, or just want to say hi, my inbox is always open. Let's make something awesome together.</p>
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
