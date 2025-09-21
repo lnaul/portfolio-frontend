@@ -57,6 +57,7 @@
 
 .section-three-container .first .bg h2 {
   font-size: clamp(2rem, 4vw, 3rem);
+  white-space: nowrap;
 }
 
 .section-three-container section .bg .clip-text {
