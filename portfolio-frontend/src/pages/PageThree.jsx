@@ -154,7 +154,7 @@ const PageThree = () => {
       };
     };
 
-    window.onload = initAnimation;
+    setTimeout(initAnimation, 1000);
 
   }, []);
 
