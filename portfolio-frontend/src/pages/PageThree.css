@@ -212,7 +212,7 @@
   text-align: left;
   width: 100%; /* Consolidated to desired 100% */
   padding-left: 0px;
-  font-size: clamp(2rem, 4vw, 5rem);
+  font-size: clamp(2rem, 4vw, 3rem) !important;
 }
 
 .web-development-text {
