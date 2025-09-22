@@ -5,41 +5,25 @@
   z-index: 1003;
 }
 
-.developer-button {
-  background-color: rgba(44, 44, 44, 0.7);
-  border: 1px solid #fb8500;
+.logo-button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
   color: #fb8500;
-  border-radius: 50%;
+  text-decoration: none;
   width: 50px;
   height: 50px;
+  border: 1px solid #fb8500;
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
-  backdrop-filter: blur(5px);
+  justify-content: center;
   transition: all 0.3s ease;
-  text-decoration: none;
-  animation: pulse 2s infinite ease-in-out;
-  outline: none;
+  background-color: rgba(44, 44, 44, 0.7);
+  backdrop-filter: blur(5px);
 }
 
-.developer-button:hover {
+.logo-button:hover {
   background-color: rgba(251, 133, 0, 0.3);
-  transform: scale(1.1);
-}
-
-.developer-logo-svg {
-  width: 30px;
-  height: 30px;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 5px 0px rgba(251, 133, 0, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 10px 5px rgba(251, 133, 0, 0.8);
-  }
-  100% {
-    box-shadow: 0 0 5px 0px rgba(251, 133, 0, 0.5);
-  }
+  color: #fb8500;
 }

@@ -8,7 +8,6 @@
   padding: 0;
   height: 100vh;
   background: black;
-  text-transform: uppercase;
   overflow: hidden; /* Prevents scrollbars on the container */
 }
 
