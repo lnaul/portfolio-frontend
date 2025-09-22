@@ -50,18 +50,20 @@ body:before {
     right: 0;
     z-index: 4;
     pointer-events: none;
-    opacity: 0.05;
+    opacity: 0.04;
     /*filter: invert(0) sepia(100%) hue-rotate(-30deg) saturate(5);*/
     background-size: cover;
-    animation: scale-and-move 30s ease-in-out infinite alternate, flicker 0.5s infinite alternate;
+    animation: scale-and-move 30s ease-in-out infinite alternate, flicker 2.5s infinite alternate;
 }
 
 @keyframes flicker {
-  0% { opacity: 0.05; }
+  0% { opacity: 0.04; }
+  25% { opacity: 0.02; }
 
   50% { opacity: 0.04; }
+  75% { opacity: 0.02; }
   
-  100% { opacity: 0.05; }
+  100% { opacity: 0.04; }
 }
 
 .main-nav {
