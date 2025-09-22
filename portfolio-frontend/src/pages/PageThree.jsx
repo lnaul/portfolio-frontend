@@ -85,9 +85,11 @@ const PageThree = () => {
       let sections = component.querySelectorAll("section"),
         images = component.querySelectorAll(".bg"),
         headings = gsap.utils.toArray(component.querySelectorAll(".section-heading")),
+        bodyTexts = gsap.utils.toArray(component.querySelectorAll(".first .web-development-text")),
         outerWrappers = gsap.utils.toArray(component.querySelectorAll(".outer")),
         innerWrappers = gsap.utils.toArray(component.querySelectorAll(".inner")),
         splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
+        splitBodyTexts = bodyTexts.map(text => new SplitText(text, { type: "words,lines" })),
         currentIndex = -1,
         wrap = gsap.utils.wrap(0, sections.length),
         animating;
@@ -126,6 +128,20 @@ const PageThree = () => {
               ease: "power2",
               stagger: { each: 0.02, from: "random" }
             }, 0.2);
+
+        if (index === 0) {
+          tl.fromTo(splitBodyTexts.flatMap(st => st.words), { // Animate words
+              autoAlpha: 0,
+              yPercent: 100 * dFactor
+          }, {
+              autoAlpha: 1,
+              yPercent: 0,
+              duration: 0.5,
+              ease: "power2",
+              stagger: { each: 0.005, from: "random" },
+          }, 0.1); // Start this animation slightly after the heading animation
+        }
+
         currentIndex = index;
       }
 
@@ -150,6 +166,7 @@ const PageThree = () => {
       return () => {
         observer.kill();
         splitHeadings.forEach(s => s.revert());
+        splitBodyTexts.forEach(s => s.revert());
         buttonInstances.forEach(instance => instance.destroy());
       };
     };
@@ -168,10 +185,10 @@ const PageThree = () => {
               <div className="bg one">
                 <div className="columns-container">
                   <div className="column-left">
-                    <h2 className="section-heading web-development-heading">Dee - Lighted To Teet You</h2>
-                    <p className="web-development-text">Hello, World! I'm Dmitry Naumov (aka Dee), a Senior UX/UI Designer & Developer. My story begins with a nickname I picked up while living in Thailand-'Dee,' which means 'Good' in Thai. It became a daily reminder for the standard I set in my work, and when I started building a career turning good ideas into great digital experiences, calling myself the 'Dee-veloper' was a no-brainer. It's a little cheesy, a lot of fun, and it keeps me focused on making good stuff.</p>
-                    <p className="web-development-text">My focus is on crafting seamless digital experiences for web, mobile, and interactive games. I love diving into the whole journey—from user research and Figma prototyping to front-end development and game creation. My toolkit spans the complete spectrum, from the first spark of an idea to the final, polished product.</p>
-                    <p className="web-development-text">You're looking at my biggest project right now—this portfolio! It's a living example of my work, so click around and have some fun with it. If you've got a cool project, a wild idea, or just want to say hi, my inbox is always open. Let's make something awesome together.</p>
+                    <h2 className="section-heading web-development-heading">Dee - Lighted to Meet You</h2>
+                    <p className="web-development-text">Hello, World! I'm Dmitry, also known as Dee, a UX/UI Designer and Developer. My story starts with a nickname I got while living in Thailand. 'Dee' means 'Good' in Thai. This became a daily reminder of the standard I set for my work.</p>
+                    <p className="web-development-text">My goal is to create seamless digital experiences for web, mobile, and interactive games. My toolkit covers the complete range, from the first spark of an idea to the final, polished product.</p>
+                    <p className="web-development-text">My biggest project right now is the portfolio you are looking at. It's a living example of my work, so feel free to click around and have fun with it.</p>
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">

@@ -218,7 +218,10 @@
   text-align: left;
   width: 100%;
   margin: 0 0 1em 0; /* Top, Right, Bottom, Left */
-  line-height: 1.5;
+  line-height: 1.4;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
 
 /* Fresh button styles from original code */
