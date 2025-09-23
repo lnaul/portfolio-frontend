@@ -55,7 +55,7 @@
 }
 
 .section-three-container .first .bg h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1rem, 4vw, 3rem);
 }
 
 .section-three-container section .bg .clip-text {
@@ -128,26 +128,28 @@
   justify-content: center;
   align-items: stretch; /* Changed to stretch */
   gap: 60px;
-  width: 80%; /* Consolidated to desired 100% */ 
+  max-width: 1440px; /* Consolidated to desired 100% */ 
+  min-width: 1080px;
   height: 60vh; /* Consolidated to desired 80vh */
   z-index: 2;
     color: rgb(200, 200, 200); /* Primary Light for text */
-    font-family: 'Fira Sans', sans-serif; /* Body text font */
+    font-family: 'Outfit', sans-serif; /* Body text font */
     
   }
 .column-left, .column-right {
   border-radius: 10px;
+  align-content: center;
   /*display: flex;
   flex-direction: column;*/
 }
 
 .column-left {
-  flex: 3;
+  flex: 4;
   background-color: transparent;
 }
 
 .column-right {
-  flex: 1;
+  flex: 2;
   /*background-color: rgba(26, 26, 26, 0.8); /* Primary Dark with transparency */
   /*backdrop-filter: blur(10px);*/
   /*border: 10px solid #fb860080;*/
@@ -208,21 +210,24 @@
 
 .web-development-heading {
   text-align: left;
-  width: 100%; /* Consolidated to desired 100% */
+  width: 100%;
   padding-left: 0px;
-  font-size: clamp(2rem, 4vw, 5rem);
-  margin-top: 0;
-  margin-bottom: 20px;
+  font-size: 50px !important;
+  text-transform: none;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .web-development-text {
   text-align: left;
+
   width: 100%;
-  margin: 0 0 1em 0; /* Top, Right, Bottom, Left */
-  line-height: 1.4;
-  font-size: 1.2em;
-  letter-spacing: 2px;
-  font-weight: 500;
+  margin: 0 0 30px 0; /* Top, Right, Bottom, Left */
+  line-height: 1.7;
+  font-size: 22px;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  
 }
 
 /* Fresh button styles from original code */

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './CustomCursor.css';
 
 const NUM_CIRCLES = 3;
-const EASING = 0.3;
+const EASING = 0.2;
 
 const CustomCursor = () => {
   const dotRef = useRef(null);
@@ -47,7 +47,7 @@ const CustomCursor = () => {
             targetScale = baseScale * 0.5; // Expand each circle
           }
           
-          const baseBorderWidth = isClickedRef.current ? 4 : 2;
+          const baseBorderWidth = isClickedRef.current ? 4 : 3;
 
           currentCircle.style.transform = `translate(-50%, -50%) scale(${targetScale})`;
           currentCircle.style.opacity = 0.5;
