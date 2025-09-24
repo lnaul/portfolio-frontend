@@ -106,30 +106,33 @@ body:before {
 }
 
 .footer-icon-button {
-  background-color: rgba(44, 44, 44, 0.7);
-  border: 1px solid #fb8500;
+  /* Removed circular styling */
   color: #fb8500;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(5px);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Removed transform from transition */
   text-decoration: none; /* Ensure no underline */
   outline: none;
+  padding: 10px; /* Add some padding for spacing */
 }
 
 .footer-icon-button:hover {
-  background-color: rgba(251, 133, 0, 0.3);
-  color: #fb8500;
-  border-color: #fb8500;
+  color: rgb(200, 200, 200); /* Change color on hover */
+  animation: wave 0.7s ease-in-out infinite; /* Apply waving animation on hover */
+}
+
+@keyframes wave {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(15deg); } /* Scale up and rotate */
+  50% { transform: scale(1.1) rotate(-15deg); }
+  75% { transform: scale(1.1) rotate(15deg); }
+  100% { transform: scale(1) rotate(0deg); }
 }
 
 .footer-icon-button svg {
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
 }
 
 .nav-links-frame a {
@@ -137,14 +140,20 @@ body:before {
   text-decoration: none;
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, letter-spacing 0.3s ease-in-out; /* Add transition for letter-spacing */
   font-size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 2px; /* Changed to 4px */
 }
 
 .nav-links-frame a:hover {
   color: rgb(200, 200, 200);
   text-shadow: 0px 0px 10px 0px #fb850080;
+  animation: letter-spacing-pulse 1s ease-in-out infinite alternate; /* Apply animation on hover */
+}
+
+@keyframes letter-spacing-pulse {
+  from { letter-spacing: 2px; }
+  to { letter-spacing: 2px; }
 }
 
 
@@ -305,7 +314,7 @@ body:before {
 
 .main-footer {
   position: fixed;
-  bottom: 0;
+  bottom: 20px; /* Added 20px space from bottom */
   left: 0;
   width: 100%;
   background-color: transparent;
