@@ -102,7 +102,7 @@ body:before {
 .footer-links-frame {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .footer-icon-button {
@@ -119,7 +119,7 @@ body:before {
 
 .footer-icon-button:hover {
   color: var(--color-primary-light); /* Hover color white */
-  animation: wave 0.7s ease-in-out infinite; /* Apply waving animation on hover */
+  animation: wave 0.8s ease-in-out infinite; /* Apply waving animation on hover */
 }
 
 @keyframes wave {
@@ -133,7 +133,7 @@ body:before {
 .footer-icon-button svg {
   width: 40px;
   height: 40px;
-  opacity: 0.9;
+  opacity: 0.75;
   
 }
 
