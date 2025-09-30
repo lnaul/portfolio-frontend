@@ -40,8 +40,8 @@
 
 .logo-button {
   font-family: 'Outfit', sans-serif;
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 500;
   color: #fb8500;
   text-decoration: none;
   letter-spacing: 1px;
@@ -58,7 +58,7 @@
 .typing-cursor {
   display: inline-block;
   width: 18px;
-  height: 26px; /* Match font size */
+  height: 24px; /* Match font size */
   --blink-color: #fb850080;
   background-color: var(--blink-color);
   transition: background-color 0.3s ease;

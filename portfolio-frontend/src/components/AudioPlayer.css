@@ -39,15 +39,30 @@
 /* Paused state: ▶❚❚ */
 .control-button .play-icon-wrapper,
 .control-button .pause-icon-wrapper {
-  transform: translateX(0);
+  transform: translateX(0) rotate(0);
 }
 
 /* Playing state: ❚❚▶ */
 .control-button.playing .play-icon-wrapper {
-  transform: translateX(32px);
+  transform: translateX(32px) rotate(0);
 }
 .control-button.playing .pause-icon-wrapper {
-  transform: translateX(-32px);
+  transform: translateX(-32px) rotate(0);
+}
+
+/* IDLE ANIMATION OVERRIDES */
+/* When idle animation triggers in PAUSED state, temporarily swap */
+.control-button.idle-swap .play-icon-wrapper {
+  transform: translateX(32px) rotate(0deg);
+}
+.control-button.idle-swap .pause-icon-wrapper {
+  transform: translateX(-32px) rotate(0deg);
+}
+
+/* When idle animation triggers in PLAYING state, temporarily un-swap */
+.control-button.playing.idle-swap .play-icon-wrapper,
+.control-button.playing.idle-swap .pause-icon-wrapper {
+  transform: translateX(0);
 }
 
 .control-button svg {
