@@ -25,7 +25,12 @@ const AudioPlayer = () => {
     <div className="audio-player">
       <audio ref={audioRef} src="/bg-atmo.mp3" loop style={{ display: 'none' }} />
       <button onClick={togglePlayPause} className={`control-button ${isPlaying ? 'playing' : ''}`}>
-        {isPlaying ? <PauseIcon /> : <PlayIcon />}
+        <span className="play-icon-wrapper">
+          <PlayIcon />
+        </span>
+        <span className="pause-icon-wrapper">
+          <PauseIcon />
+        </span>
       </button>
     </div>
   );

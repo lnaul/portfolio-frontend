@@ -53,20 +53,20 @@ body:before {
     right: 0;
     z-index: 4;
     pointer-events: none;
-    opacity: 0.055;
+    opacity: 0.075;
     /*filter: invert(0) sepia(100%) hue-rotate(-30deg) saturate(5);*/
     background-size: cover;
     animation: scale-and-move 30s ease-in-out infinite alternate, flicker 5s infinite alternate;
 }
 
 @keyframes flicker {
-  0% { opacity: 0.055; }
-  25% { opacity: 0.025; }
+  0% { opacity: 0.075; }
+  25% { opacity: 0.035; }
 
-  50% { opacity: 0.05; }
-  75% { opacity: 0.025; }
+  50% { opacity: 0.055; }
+  75% { opacity: 0.035; }
   
-  100% { opacity: 0.055; }
+  100% { opacity: 0.075; }
 }
 
 .main-nav {
@@ -107,7 +107,7 @@ body:before {
 
 .footer-icon-button {
   /* Removed circular styling */
-  color: #fb8500; /* Default color orange */
+  color: #fb8600; /* Default color orange */
   display: flex;
   justify-content: center;
   align-items: center;

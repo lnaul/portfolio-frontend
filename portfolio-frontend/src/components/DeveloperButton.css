@@ -1,47 +1,75 @@
 .developer-button-container {
   position: fixed;
-  top: 20px;
+  top: 15px;
   left: 20px;
   z-index: 1003;
 }
 
 .logo-button:hover {
-  background-color: rgba(251, 133, 0, 0.3);
-  color: #fb8500;
-  animation-play-state: paused; /* Pause animation on hover */
+  background-color: transparent;
+  color: var(--color-primary-light);
 }
 
-
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.logo-button:hover .typing-cursor {
+  --blink-color: var(--color-primary-light);
 }
 
-
+/*@keyframes logo-wave {
+  0%, 10%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  5% {
+    transform: scale(1.25) rotate(15deg);
+  }
+  10% {
+    transform: scale(1.25) rotate(-15deg);
+  }
+  12.5% {
+    transform: scale(1.25) rotate(15deg);
+  }
+  15% {
+    transform: scale(1.25) rotate(-7.5deg);
+  }
+  17.5% {
+    transform: scale(1.25) rotate(7.5deg);
+  }
+  20% {
+    transform: scale(1) rotate(0deg);
+  }
+}*/
 
 .logo-button {
   font-family: 'Outfit', sans-serif;
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 32px;
+  font-weight: 600;
   color: #fb8500;
   text-decoration: none;
-  width: 50px;
-  height: 50px;
-  margin-top: -5px;
-  border: 3px dotted #fb8500;
-  border-radius: 50%;
+  letter-spacing: 1px;
+  margin-top: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
-  background-color: rgba(44, 44, 44, 0.7);
-  backdrop-filter: blur(5px);
-  animation: spin 20s linear infinite;
+  background-color: transparent;
   
+  padding: 10px; /* Add some padding for better appearance */
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 18px;
+  height: 26px; /* Match font size */
+  --blink-color: #fb850080;
+  background-color: var(--blink-color);
+  transition: background-color 0.3s ease;
+  animation: blink 1s step-end infinite;
+  margin-left: 3px;
+}
+
+
+
+@keyframes blink {
+  from, to { background-color: transparent; }
+  50% { background-color: var(--blink-color); }
 }
 
