@@ -16,8 +16,8 @@ function App() {
       <Header />
       <AudioPlayer />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/scroll" element={<PageThree />} />
+        <Route path="/" element={<PageThree />} />
+        <Route path="/scroll" element={<HomePage />} />
       </Routes>
       <Footer />
     </>
