@@ -4,7 +4,7 @@ import { PlayIcon, PauseIcon } from './icons/AudioIcons';
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isIdleAnimating, setIsIdleAnimating] = useState(false);
+  const [isIdlePulsing, setIsIdlePulsing] = useState(false);
   const audioRef = useRef(null);
 
   useEffect(() => {
@@ -20,11 +20,11 @@ const AudioPlayer = () => {
 
   useEffect(() => {
     const idleInterval = setInterval(() => {
-      setIsIdleAnimating(true);
+      setIsIdlePulsing(true);
       setTimeout(() => {
-        setIsIdleAnimating(false);
-      }, 500); // Duration of the swap-back animation
-    }, 5000); // Repeat every 5 seconds
+        setIsIdlePulsing(false);
+      }, 1000); // Animation duration
+    }, 3000); // Repeat every 5 seconds
 
     return () => clearInterval(idleInterval);
   }, []);
@@ -36,7 +36,7 @@ const AudioPlayer = () => {
   return (
     <div className="audio-player">
       <audio ref={audioRef} src="/bg-atmo.mp3" loop style={{ display: 'none' }} />
-      <button onClick={togglePlayPause} className={`control-button ${isPlaying ? 'playing' : ''} ${isIdleAnimating ? 'idle-swap' : ''}`}>
+      <button onClick={togglePlayPause} className={`control-button ${isPlaying ? 'playing' : ''} ${isIdlePulsing ? 'idle-pulse' : ''}`}>
         <span className="play-icon-wrapper">
           <PlayIcon />
         </span>

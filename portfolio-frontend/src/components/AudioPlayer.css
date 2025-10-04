@@ -20,7 +20,7 @@
 }
 
 .control-button:active {
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .control-button:hover {
@@ -50,19 +50,24 @@
   transform: translateX(-32px) rotate(0);
 }
 
-/* IDLE ANIMATION OVERRIDES */
-/* When idle animation triggers in PAUSED state, temporarily swap */
-.control-button.idle-swap .play-icon-wrapper {
-  transform: translateX(32px) rotate(0deg);
-}
-.control-button.idle-swap .pause-icon-wrapper {
-  transform: translateX(-32px) rotate(0deg);
+@keyframes pulse-scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-/* When idle animation triggers in PLAYING state, temporarily un-swap */
-.control-button.playing.idle-swap .play-icon-wrapper,
-.control-button.playing.idle-swap .pause-icon-wrapper {
-  transform: translateX(0);
+.control-button.idle-pulse .pause-icon-wrapper svg {
+  animation: pulse-scale 0.4s ease-in-out;
+}
+
+.control-button.idle-pulse .play-icon-wrapper svg {
+  animation: pulse-scale 0.4s ease-in-out 0.2s;
 }
 
 .control-button svg {
