@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Header from '../components/Header';
+import ScrollDownIndicator from '../components/icons/ScrollDownIndicator';
+import ScrollUpIndicator from '../components/icons/ScrollUpIndicator';
 import './PageThree.css';
 
 // Per your request, this is a fresh implementation based on the original code provided.
@@ -162,12 +164,23 @@ const PageThree = () => {
       const buttons = component.querySelectorAll('.js-button');
       const buttonInstances = Array.from(buttons).map(el => new HoverBtn(el));
 
+      const scrollDownBtn = document.getElementById('scroll-down-btn');
+      const scrollUpBtn = document.getElementById('scroll-up-btn');
+
+      const handleScrollDown = () => !animating && gotoSection(currentIndex + 1, 1);
+      const handleScrollUp = () => !animating && gotoSection(currentIndex - 1, -1);
+
+      scrollDownBtn.addEventListener('click', handleScrollDown);
+      scrollUpBtn.addEventListener('click', handleScrollUp);
+
       // Cleanup function to run when the component unmounts
       return () => {
         observer.kill();
         splitHeadings.forEach(s => s.revert());
         splitBodyTexts.forEach(s => s.revert());
         buttonInstances.forEach(instance => instance.destroy());
+        scrollDownBtn.removeEventListener('click', handleScrollDown);
+        scrollUpBtn.removeEventListener('click', handleScrollUp);
       };
     };
 
@@ -246,6 +259,12 @@ const PageThree = () => {
             </div>
           </div>
         </section>
+      </div>
+      <div id="scroll-down-btn" className="scroll-indicator scroll-down-indicator">
+        <ScrollDownIndicator />
+      </div>
+      <div id="scroll-up-btn" className="scroll-indicator scroll-up-indicator">
+        <ScrollUpIndicator />
       </div>
     </>
   );
