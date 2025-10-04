@@ -2,9 +2,9 @@ import React from 'react';
 
 const ScrollDownIndicator = () => (
   <div className="scroll-indicator-content">
-    <span>Scroll Down</span>
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 19V5M12 19L19 12M12 19L5 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <span className="scroll-text">N<br/>E<br/>X<br/>T</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 17L17 12H7L12 17Z" />
     </svg>
   </div>
 );

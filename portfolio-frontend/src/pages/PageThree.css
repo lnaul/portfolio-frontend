@@ -509,11 +509,11 @@ a.button, a.btn {
 
 .scroll-down-indicator {
   bottom: 20px;
-  left: 20px;
+  right: 20px;
 }
 
 .scroll-up-indicator {
-  bottom: 20px;
+  top: 20px;
   right: 20px;
 }
 
@@ -522,7 +522,7 @@ a.button, a.btn {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
@@ -533,21 +533,28 @@ a.button, a.btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fb8500;
+  color: #ffffff;
   font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 20px; /* Increased font size */
+  font-weight: 600; /* Made thicker */
+  gap: 0px; /* Add gap between text and SVG */
+}
+
+.scroll-indicator-content svg {
+  width: 60px; /* Increased SVG size */
+  height: 60px; /* Increased SVG size */
+}
+
+.scroll-indicator-content .scroll-text {
+  line-height: 1.1; /* Adjust line height for stacked letters */
+  text-align: center;
 }
 
 .scroll-up-indicator .scroll-indicator-content svg {
-  margin-bottom: 5px;
-}
-
-.scroll-down-indicator .scroll-indicator-content {
-  flex-direction: column-reverse;
+  margin-bottom: -20px;
 }
 
 .scroll-down-indicator .scroll-indicator-content svg {
-  margin-bottom: 0;
-  margin-top: 5px;
+  margin-top: -20px;
 }
