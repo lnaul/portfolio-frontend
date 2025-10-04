@@ -159,6 +159,8 @@
   align-items: center;
   justify-content: space-between;
   box-shadow:  0px 0 20px 0px #fb860080;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .gif-placeholder {
@@ -400,7 +402,61 @@ a.button, a.btn {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
+  .columns-container {
+    flex-direction: column;
+    height: 80vh;
+    width: 90%;
+    min-width: 0;
+    padding: 100px 20px;
+    position: relative;
+    transform: none;
+    top: auto;
+    left: auto;
+    overflow-y: auto;
+    align-items: center;
+  }
+  .column-left, .column-right {
+    width: 100%;
+    max-width: 700px; /* Max width for readability */
+    flex: 1;
+  }
+  .column-left {
+    margin-bottom: 60px;
+  }
+
+  .web-development-heading {
+    font-size: 20px !important;
+    text-align: center;
+  }
+
+  .web-development-text {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .column-right {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gif-placeholder {
+    height: 400px;
+    width: 100%;
+  }
+
+  a.button, a.btn {
+    height: auto;
+    width: 100%;
+    padding: 20px 0;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 1080px) {
   .section-three-container .first .bg::after {
     animation-name: slow-scale-mobile;
   }
@@ -425,6 +481,7 @@ a.button, a.btn {
   }
 
   .gif-placeholder {
+    display: none;
     height: 300px;
     
     

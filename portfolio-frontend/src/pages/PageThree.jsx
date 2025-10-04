@@ -171,7 +171,7 @@ const PageThree = () => {
       };
     };
 
-    setTimeout(initAnimation, 1000);
+    setTimeout(initAnimation, 0);
 
   }, []);
 
@@ -186,8 +186,8 @@ const PageThree = () => {
                 <div className="columns-container">
                   <div className="column-left">
                     <h2 className="section-heading web-development-heading">Dee-Lighted to Meet You</h2>
-                    <p className="web-development-text">Hello, World! I'm Dmitry, also known as Dee, a UX/UI Designer and Developer. My story starts with a nickname I got while living in Thailand. 'Dee' means 'Good' in Thai. This became a daily reminder of the standard I set for my work. </p>
-                    <p className="web-development-text">My goal is to create seamless digital experiences for web, mobile, and interactive games. My biggest project right now is the portfolio you are looking at. It's a living example of my work, so feel free to click around and have fun with it. </p>
+                    <p className="web-development-text">Hello, World! I'm Dmitry, also known as Dee, a UX/UI Designer and Developer. My story starts with a nickname I got while living in Thailand. 'Dee' means 'Good' in Thai. This became a daily reminder of the standard I set for my work.</p>
+                    <p className="web-development-text">My goal is to create seamless digital experiences for web, mobile, and interactive games. My biggest project right now is the portfolio you are looking at. It's a living example of my work, so feel free to click around and have fun with it.</p>
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">

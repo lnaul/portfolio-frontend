@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CodeIcon from './icons/CodeIcon';
-import MobileIcon from './icons/MobileIcon';
-import GamepadIcon from './icons/GamepadIcon';
 
 const Header = () => {
   return (
@@ -11,9 +8,6 @@ const Header = () => {
         <a href="/#page-2" className="nav-link-text">Web Dev</a>
         <a href="/#page-3" className="nav-link-text">Mobile Apps</a>
         <a href="/#page-4" className="nav-link-text">Game Dev</a>
-        <a href="/#page-2" className="nav-link-icon"><CodeIcon /></a>
-        <a href="/#page-3" className="nav-link-icon"><MobileIcon /></a>
-        <a href="/#page-4" className="nav-link-icon"><GamepadIcon /></a>
 
       </div>
     </nav>
