@@ -7,11 +7,11 @@
 
 .logo-button:hover {
   background-color: transparent;
-  color: var(--color-primary-light);
+  color: #c66a00;
 }
 
 .logo-button:hover .typing-cursor {
-  --blink-color: var(--color-primary-light);
+  --blink-color: #c66a0080;
 }
 
 /*@keyframes logo-wave {
@@ -42,7 +42,7 @@
   font-family: 'Outfit', sans-serif;
   font-size: 30px;
   font-weight: 500;
-  color: #fb8500;
+  color: #808080;
   text-decoration: none;
   letter-spacing: 1px;
   margin-top: 0px;
@@ -59,7 +59,7 @@
   display: inline-block;
   width: 18px;
   height: 24px; /* Match font size */
-  --blink-color: #fb850080;
+  --blink-color: #80808080;
   background-color: var(--blink-color);
   transition: background-color 0.3s ease;
   animation: blink 1s step-end infinite;

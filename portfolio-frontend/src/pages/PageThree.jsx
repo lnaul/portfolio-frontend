@@ -77,6 +77,8 @@ class HoverBtn {
 
 const PageThree = () => {
   const componentRef = useRef(null);
+  const scrollDownRef = useRef(null);
+  const scrollUpRef = useRef(null);
 
   useEffect(() => {
     const component = componentRef.current;
@@ -261,10 +263,10 @@ const PageThree = () => {
         </section>
       </div>
       <div id="scroll-down-btn" className="scroll-indicator scroll-down-indicator">
-        <ScrollDownIndicator />
+        <ScrollDownIndicator ref={scrollDownRef} />
       </div>
       <div id="scroll-up-btn" className="scroll-indicator scroll-up-indicator">
-        <ScrollUpIndicator />
+        <ScrollUpIndicator ref={scrollUpRef} />
       </div>
     </>
   );

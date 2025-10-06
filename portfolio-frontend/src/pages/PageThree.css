@@ -132,7 +132,7 @@
   min-width: 1080px;
   height: 60vh; /* Consolidated to desired 80vh */
   z-index: 2;
-    color: rgb(200, 200, 200); /* Primary Light for text */
+    color: #b0b0b0; /* Primary Light for text */
     font-family: 'Outfit', sans-serif; /* Body text font */
     
   }
@@ -158,7 +158,7 @@
   /*color: #E0E0E0;*/
   align-items: center;
   justify-content: space-between;
-  box-shadow:  0px 0 20px 0px #fb860080;
+  box-shadow:  0px 0 20px 0px #c66a0080;
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -171,7 +171,7 @@
   align-items: center;
   position: relative;
   z-index: 5;
-  border-top: solid 2px #fb8500;
+  border-top: solid 2px #c66a00;
   border-radius: 0px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -188,7 +188,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fb8600;
+  background-color: #c66a00;
   mix-blend-mode: multiply;
   pointer-events: none;
   border-top-left-radius: 10px;
@@ -218,7 +218,7 @@
   font-size: 50px !important;
   text-transform: none;
   margin-top: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .web-development-text {
@@ -226,7 +226,7 @@
 
   width: 100%;
   margin: 0 0 30px 0; /* Top, Right, Bottom, Left */
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 22px;
   letter-spacing: 1.5px;
   font-weight: 400;
@@ -259,13 +259,13 @@ a.button, a.btn {
   
 	position: relative;
 	background-color: rgb(25, 25, 25);
-	border-bottom: solid 2px #fb8600;
+	border-bottom: solid 2px #c66a00;
   border-top: solid 0px #fb860080;
   border-right: solid 0px #fb8500;
 	line-height: 3.5rem;
 	white-space: nowrap;
 	padding: 0 3rem;
-	color: #fb8500;
+	color: #c66a00;
 	font-size: 22px;
   font-family: 'Poppins', sans-serif;
 	text-transform: uppercase;
@@ -333,7 +333,7 @@ a.button, a.btn {
 	&:after {
 		content: '';
 		display: block;
-		background: #fb8500;
+		background: #c66a00;
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -500,7 +500,6 @@ a.button, a.btn {
   cursor: pointer;
   opacity: 0.8;
   transition: opacity 0.3s ease;
-  animation: pulse 2s infinite;
 }
 
 .scroll-indicator:hover {
@@ -517,28 +516,21 @@ a.button, a.btn {
   right: 20px;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 .scroll-indicator-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #ffffff;
+  color: #808080; /* Light Gray */
   font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
   font-size: 20px; /* Increased font size */
   font-weight: 600; /* Made thicker */
   gap: 0px; /* Add gap between text and SVG */
+  transition: color 0.3s ease;
+}
+
+.scroll-indicator:hover .scroll-indicator-content {
+  color: #c66a00; /* Orange */
 }
 
 .scroll-indicator-content svg {
@@ -547,6 +539,8 @@ a.button, a.btn {
 }
 
 .scroll-indicator-content .scroll-text {
+  display: flex;
+  flex-direction: column;
   line-height: 1.1; /* Adjust line height for stacked letters */
   text-align: center;
 }

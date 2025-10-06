@@ -109,7 +109,7 @@ body:before {
 
 .footer-icon-button {
   /* Removed circular styling */
-  color: #fb8600; /* Default color orange */
+  color: #c66a00; /* Default color orange */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +120,7 @@ body:before {
 }
 
 .footer-icon-button:hover {
-  color: var(--color-primary-light); /* Hover color white */
+  color: #808080; /* Hover color white */
   animation: wave 0.8s ease-in-out infinite; /* Apply waving animation on hover */
 }
 
@@ -135,12 +135,12 @@ body:before {
 .footer-icon-button svg {
   width: 40px;
   height: 40px;
-  opacity: 0.75;
+  opacity: 0.85;
   
 }
 
 .nav-links-frame a {
-  color: #fb8500;
+  color: #c66a00;
   text-decoration: none;
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
@@ -150,7 +150,7 @@ body:before {
 }
 
 .nav-links-frame a:hover {
-  color: rgb(200, 200, 200);
+  color: #808080;
   text-shadow: 0px 0px 10px 0px #fb850080;
   animation: letter-spacing-pulse 1s ease-in-out infinite alternate; /* Apply animation on hover */
 }
