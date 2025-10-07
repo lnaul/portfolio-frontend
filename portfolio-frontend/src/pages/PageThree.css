@@ -215,7 +215,7 @@
   text-align: left;
   width: 100%;
   padding-left: 0px;
-  font-size: 50px !important;
+  font-size: 48px !important;
   text-transform: none;
   margin-top: 15px;
   margin-bottom: 25px;
@@ -266,13 +266,13 @@ a.button, a.btn {
 	white-space: nowrap;
 	padding: 0 3rem;
 	color: #c66a00;
-	font-size: 22px;
-  font-family: 'Poppins', sans-serif;
+	font-size: 20px;
+  font-family: 'Outfit', sans-serif;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 600;
 	text-align: center;
 	overflow: hidden;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
   height: 20%;
   margin-top: 0px;
   
@@ -320,13 +320,13 @@ a.button, a.btn {
 			position: absolute;
 			top: 0;
 			width: 100%;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Outfit', sans-serif;
 			-webkit-transform: translateY(40px);
 			transform: translateY(40px);
 			color: rgb(25, 25, 25);
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 1px;
-      font-size: 24px;
+      font-size: 20px;
 		}
 	}
 
