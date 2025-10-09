@@ -200,9 +200,9 @@ const PageThree = () => {
               <div className="bg one">
                 <div className="columns-container">
                   <div className="column-left">
-                    <h2 className="section-heading web-development-heading">Dee-Lighted to Meet You</h2>
-                    <p className="web-development-text">Hello, World! I'm Dmitry, also known as Dee, a UX/UI Designer and Developer. My story starts with a nickname I got while living in Thailand. 'Dee' means 'Good' in Thai. This became a daily reminder of the standard I set for my work.</p>
-                    <p className="web-development-text">My goal is to create seamless digital experiences for web, mobile, and interactive games. My biggest project right now is the portfolio you are looking at. It's a living example of my work, so feel free to click around and have fun with it.</p>
+                  <h2 class="section-heading web-development-heading">Dee-Lighted to Meet You</h2>
+                  <p className="web-development-text">Hello, World! I'm Dmitry, also known as Dee, <span style={{color: '#c66a00'}}>UX/UI Developer.</span> My story starts with a nickname I got while living in Thailand. <span style={{color: '#c66a00'}}>'Dee' Means 'Good' in Thai.</span> This became a daily reminder of the standard I set for my projects. My objective is to craft seamless digital experiences for <span style={{color: '#c66a00'}}>Web, Mobile Apps, & Games.</span></p>
+                  <p className="web-development-text">The portfolio you are navigating is a fully custom solution, architected with <span style={{color: '#c66a00'}}>Node.js & React,</span> which clearly demonstrates my expertise in bringing a design vision to life with integrated <span style={{color: '#c66a00'}}>High-Quality,</span> functional code. Take a moment to click around and experience the <span style={{color: '#c66a00'}}>Live Examples of My Work.</span></p>
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
@@ -210,8 +210,8 @@ const PageThree = () => {
                     </div>
                     <a href="#" className="button js-button">
                       <span className="button__inner">
-                        <span className="button__text js-button__text">Start to Explore</span>
-                        <span className="button__hover js-button__hover">Start to Explore</span>
+                        <span className="button__text js-button__text">Start the Journey</span>
+                        <span className="button__hover js-button__hover">Start the Journey</span>
                       </span>
                     </a>
                   </div>

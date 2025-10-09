@@ -127,10 +127,10 @@
   display: flex;
   justify-content: center;
   align-items: stretch; /* Changed to stretch */
-  gap: 60px;
+  gap: 50px;
   max-width: 1440px; /* Consolidated to desired 100% */ 
   min-width: 1080px;
-  height: 60vh; /* Consolidated to desired 80vh */
+  height: 70vh; /* Consolidated to desired 80vh */
   z-index: 2;
     color: #b0b0b0; /* Primary Light for text */
     font-family: 'Outfit', sans-serif; /* Body text font */
@@ -159,8 +159,8 @@
   align-items: center;
   justify-content: space-between;
   box-shadow:  0px 0 10px 0px #c66a0080;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 35px;
+  margin-bottom: 40px;
 }
 
 .gif-placeholder {
@@ -215,10 +215,10 @@
   text-align: left;
   width: 100%;
   padding-left: 0px;
-  font-size: 40px !important;
+  font-size: 36px !important;
   letter-spacing: 4px;
   text-transform: none;
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 30px;
 }
 
@@ -230,7 +230,7 @@
   line-height: 1.8;
   font-size: 20px;
   letter-spacing: 2px;
-  font-weight: 500;
+  font-weight: 600;
   
 }
 
@@ -270,7 +270,7 @@ a.button, a.btn {
 	font-size: 20px;
   font-family: 'Outfit', sans-serif;
 	text-transform: uppercase;
-	font-weight: 600;
+	font-weight: 700;
 	text-align: center;
 	overflow: hidden;
 	letter-spacing: 2px;
@@ -325,9 +325,9 @@ a.button, a.btn {
 			-webkit-transform: translateY(40px);
 			transform: translateY(40px);
 			color: rgb(25, 25, 25);
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 1px;
-      font-size: 20px;
+      font-size: 21px;
 		}
 	}
 
@@ -521,11 +521,11 @@ a.button, a.btn {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #808080; /* Light Gray */
+  color: #80808080; /* Light Gray */
   font-family: 'Outfit', sans-serif;
   text-transform: uppercase;
   font-size: 20px; /* Increased font size */
-  font-weight: 600; /* Made thicker */
+  font-weight: 700; /* Made thicker */
   gap: 0px; /* Add gap between text and SVG */
   transition: color 0.3s ease;
 }
