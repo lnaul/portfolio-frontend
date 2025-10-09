@@ -192,7 +192,8 @@ const PageThree = () => {
 
   return (
     <>
-      <Header />
+      
+      
       <div ref={componentRef} className="section-three-container">
         <section className="first">
           <div className="outer">
@@ -200,8 +201,8 @@ const PageThree = () => {
               <div className="bg one">
                 <div className="columns-container">
                   <div className="column-left">
-                  <h2 class="section-heading web-development-heading">Dee-Lighted to Meet You</h2>
-                  <p className="web-development-text">Hello, World! I'm Dmitry, also known as Dee, <span style={{color: '#c66a00'}}>UX/UI Developer.</span> My story starts with a nickname I got while living in Thailand. <span style={{color: '#c66a00'}}>'Dee' Means 'Good' in Thai.</span> This became a daily reminder of the standard I set for my projects. My objective is to craft seamless digital experiences for <span style={{color: '#c66a00'}}>Web, Mobile Apps, & Games.</span></p>
+                  <h2 className="section-heading web-development-heading"><span style={{color: '#c66a00'}}>Dee-Lighted</span> to Meet You</h2>
+                  <p className="web-development-text">Hello, World! I'm Dmitry, also known as Dee, <span style={{color: '#c66a00'}}>UX/UI Developer.</span> My story starts with a nickname I got while living in Thailand. <span style={{color: '#c66a00'}}>'Dee' Means 'Good' in Thai.</span> It's my daily reminder, my work must never be just good but beyond. My objective is to craft seamless digital experiences for <span style={{color: '#c66a00'}}>Web, Mobile Apps, & Games.</span></p>
                   <p className="web-development-text">The portfolio you are navigating is a fully custom solution, architected with <span style={{color: '#c66a00'}}>Node.js & React,</span> which clearly demonstrates my expertise in bringing a design vision to life with integrated <span style={{color: '#c66a00'}}>High-Quality,</span> functional code. Take a moment to click around and experience the <span style={{color: '#c66a00'}}>Live Examples of My Work.</span></p>
                   </div>
                   <div className="column-right">
