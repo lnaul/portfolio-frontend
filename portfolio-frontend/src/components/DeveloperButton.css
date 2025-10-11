@@ -66,6 +66,13 @@
   margin-left: 3px;
 }
 
+@media (max-width: 1080px) {
+  .developer-button-container {
+    top: 20px;
+    left: 10px;
+  }
+}
+
 
 
 @keyframes blink {

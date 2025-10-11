@@ -70,6 +70,13 @@
   animation: pulse-scale 0.4s ease-in-out 0.2s;
 }
 
+@media (max-width: 1080px) {
+  .audio-player {
+    bottom: 20px;
+    left: 10px;
+  }
+}
+
 .control-button svg {
     width: 32px;
     height: 32px;

@@ -5,6 +5,7 @@ const NUM_CIRCLES = 3;
 const EASING = 0.2;
 
 const CustomCursor = () => {
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
   const dotRef = useRef(null);
   const circleRefs = useRef([]);
   
@@ -14,6 +15,17 @@ const CustomCursor = () => {
   const circlePositions = useRef(Array(NUM_CIRCLES).fill({ x: 0, y: 0 }));
 
   useEffect(() => {
+    const checkForTouch = () => {
+      return ( 'ontouchstart' in window ) || 
+             ( navigator.maxTouchPoints > 0 ) || 
+             ( navigator.msMaxTouchPoints > 0 );
+    }
+    
+    if (checkForTouch()) {
+      setIsTouchDevice(true);
+      return;
+    }
+
     const onMouseMove = (e) => {
       mousePos.current = { x: e.clientX, y: e.clientY };
       dotRef.current.style.left = `${mousePos.current.x}px`;
@@ -75,6 +87,10 @@ const CustomCursor = () => {
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
+
+  if (isTouchDevice) {
+    return null;
+  }
 
   return (
     <div className="cursor-container">

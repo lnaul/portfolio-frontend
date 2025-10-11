@@ -280,6 +280,14 @@ body:before {
   .nav-links-frame a {
     font-size: 16px;
   }
+
+  .nav-links-frame {
+    padding: 15px 20px;
+  }
+
+  .main-footer {
+    bottom: 10px;
+  }
 }
 
 @media (min-width: 1080px) {

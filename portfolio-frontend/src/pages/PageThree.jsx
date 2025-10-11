@@ -163,6 +163,11 @@ const PageThree = () => {
       gsap.set(".columns-container", { visibility: "visible" });
       gsap.set(".section-three-container .first .section-heading, .section-three-container .first .web-development-text", { visibility: "visible" });
 
+      if (window.matchMedia("(max-width: 1080px)").matches) {
+        gsap.set(".scroll-up-indicator", { right: 20 });
+        gsap.set(".scroll-down-indicator", { right: 20 });
+      }
+
       // --- End of Main Page Scroll Logic ---
 
       // --- Button Animation Logic ---

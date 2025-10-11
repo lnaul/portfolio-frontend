@@ -455,9 +455,7 @@ a.button, a.btn {
     padding: 20px 0;
     line-height: normal;
   }
-}
 
-@media (max-width: 1080px) {
   .section-three-container .first .bg::after {
     animation-name: slow-scale-mobile;
   }
@@ -492,6 +490,16 @@ a.button, a.btn {
     height: 80px;
     
 
+  }
+
+  .scroll-up-indicator {
+    top: 10px;
+    right: 10px;
+  }
+
+  .scroll-down-indicator {
+    bottom: 10px;
+    right: 10px;
   }
 }
 
@@ -557,4 +565,10 @@ a.button, a.btn {
 .section-three-container .main-nav {
   opacity: 0;
   pointer-events: none; /* to disable interaction with the transparent header */
+}
+
+@media (max-width: 1080px) {
+  .scroll-indicator {
+    margin-right: -20px;
+  }
 }
