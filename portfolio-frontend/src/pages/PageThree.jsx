@@ -160,6 +160,9 @@ const PageThree = () => {
       });
 
       gotoSection(0, 1);
+      gsap.set(".columns-container", { visibility: "visible" });
+      gsap.set(".section-three-container .first .section-heading, .section-three-container .first .web-development-text", { visibility: "visible" });
+
       // --- End of Main Page Scroll Logic ---
 
       // --- Button Animation Logic ---
@@ -186,7 +189,12 @@ const PageThree = () => {
       };
     };
 
-    setTimeout(initAnimation, 0);
+    WebFont.load({
+      google: {
+        families: ['Outfit:400,600,700']
+      },
+      active: initAnimation
+    });
 
   }, []);
 
