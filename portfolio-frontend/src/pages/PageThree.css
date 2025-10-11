@@ -406,8 +406,8 @@ a.button, a.btn {
 @media (max-width: 1080px) {
   .columns-container {
     flex-direction: column;
-    height: 80vh;
-    width: 90%;
+    height: 75vh;
+    width: 75%;
     min-width: 0;
     padding: 100px 20px;
     position: relative;
@@ -426,14 +426,21 @@ a.button, a.btn {
     margin-bottom: 60px;
   }
 
-  .web-development-heading {
-    font-size: 20px !important;
-    text-align: center;
-  }
-
   .web-development-text {
     font-size: 16px;
     text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .web-development-heading {
+    font-size: 25px !important;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    margin-top: 0px;
   }
 
   .column-right {
@@ -463,6 +470,7 @@ a.button, a.btn {
   .columns-container {
     flex-direction: column;
     height: auto;
+    gap: 0;
   }
 
   .column-left, .column-right {
@@ -476,29 +484,28 @@ a.button, a.btn {
   .column-right {
     margin-left: 40px;
     margin-right: 40px;
-    margin-bottom: 50px;
   }
 
   .gif-placeholder {
     display: none;
-    height: 300px;
+    height: 0;
     
     
   }
 
   a.button, a.btn {
-    height: 80px;
+    height: auto;
     
 
   }
 
   .scroll-up-indicator {
-    top: 10px;
+    top: 0px;
     right: 10px;
   }
 
   .scroll-down-indicator {
-    bottom: 10px;
+    bottom: 0px;
     right: 10px;
   }
 }
@@ -516,12 +523,12 @@ a.button, a.btn {
 }
 
 .scroll-down-indicator {
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
 }
 
 .scroll-up-indicator {
-  top: 20px;
+  top: 10px;
   right: 20px;
 }
 
