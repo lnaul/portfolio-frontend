@@ -286,7 +286,7 @@ body:before {
   }
 
   .main-footer {
-    bottom: 10px;
+    bottom: 0px;
   }
 }
 

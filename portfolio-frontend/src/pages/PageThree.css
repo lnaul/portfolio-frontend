@@ -435,12 +435,12 @@ a.button, a.btn {
   }
 
   .web-development-heading {
-    font-size: 20px !important;
+    font-size: 22px !important;
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 10px;
     line-height: 1.2;
-    margin-top: 0px;
+    margin-top: 10px;
   }
 
   .column-right {
@@ -464,6 +464,7 @@ a.button, a.btn {
     padding: 20px 0;
     line-height: normal;
     font-size: 16px;
+    margin-top: -10px;
   }
 
   
@@ -571,11 +572,11 @@ a.button, a.btn {
 }
 
 .scroll-up-indicator .scroll-indicator-content svg {
-  margin-bottom: -20px;
+  margin-bottom: -25px;
 }
 
 .scroll-down-indicator .scroll-indicator-content svg {
-  margin-top: -20px;
+  margin-top: -25px;
 }
 
 .section-three-container .main-nav {
@@ -585,7 +586,7 @@ a.button, a.btn {
 
 @media (max-width: 1080px) {
   .scroll-indicator {
-    margin-right: -20px;
+    margin-right: -25px;
   }
 
   .js-button__hover {
