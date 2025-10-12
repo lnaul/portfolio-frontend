@@ -409,7 +409,7 @@ a.button, a.btn {
     height: 80vh;
     width: 340px;
     min-width: 0;
-    padding: 0px 0px;
+    padding: 0px 20px;
     position: relative;
     transform: none;
     top: auto;
