@@ -409,7 +409,7 @@ a.button, a.btn {
     height: 80vh;
     width: 340px;
     min-width: 0;
-    padding: 100px 20px;
+    padding: 0px 0px;
     position: relative;
     transform: none;
     top: auto;
@@ -430,7 +430,7 @@ a.button, a.btn {
     font-size: 14px;
     text-align: center;
     letter-spacing: 1px;
-    line-height: 1.4;
+    line-height: 1.5;
     margin-bottom: 15px;
   }
 

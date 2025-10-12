@@ -83,6 +83,13 @@
     pointer-events: none;
 }
 
+@media (max-width: 1080px) {
+  .control-button svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
 
 
 /*@keyframes pulse {
