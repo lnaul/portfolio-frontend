@@ -68,8 +68,17 @@
 
 @media (max-width: 1080px) {
   .developer-button-container {
-    top: 0px;
+    top: 20px;
     left: 0px;
+  }
+
+  .logo-button {
+    font-size: 24px;
+  }
+
+  .typing-cursor {
+    width: 16px;
+    height: 20px;
   }
 }
 

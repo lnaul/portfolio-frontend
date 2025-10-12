@@ -72,7 +72,7 @@
 
 @media (max-width: 1080px) {
   .audio-player {
-    bottom: 0px;
+    bottom: 5px;
     left: 0px;
   }
 }
