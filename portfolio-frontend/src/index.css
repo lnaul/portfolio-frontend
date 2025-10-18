@@ -347,3 +347,7 @@ body:before {
     transform: scale(1.8) translateX(0) rotate(-30deg);
   }
 }
+
+.nav-link-text.active {
+  color: #c66a00;
+}

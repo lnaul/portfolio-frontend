@@ -89,3 +89,7 @@
   50% { background-color: var(--blink-color); }
 }
 
+.logo-button.disabled {
+  opacity: 1;
+  cursor: default;
+}

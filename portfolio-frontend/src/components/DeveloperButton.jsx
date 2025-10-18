@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './DeveloperButton.css';
+import eventBus from '../utils/eventBus';
 
 const DeveloperButton = () => {
   const [displayText, setDisplayText] = useState('>D');
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     const sequence = () => {
@@ -17,17 +18,29 @@ const DeveloperButton = () => {
     };
 
     sequence(); // Run on initial mount
-    const intervalId = setInterval(sequence, 7000); // Repeat every 5 seconds
+    const intervalId = setInterval(sequence, 7000); // Repeat every 7 seconds
 
-    return () => clearInterval(intervalId);
+    const handleSlideChange = (index) => {
+      setActiveIndex(index);
+    };
+
+    eventBus.on('slideChanged', handleSlideChange);
+
+    return () => {
+      clearInterval(intervalId);
+      eventBus.remove('slideChanged', handleSlideChange);
+    };
   }, []);
 
   return (
     <div className="developer-button-container">
-      <Link to="/" className="logo-button">
+      <a 
+        href="javascript:void(0)" 
+        onClick={() => activeIndex !== 0 && eventBus.dispatch('navigateTo', 0)}
+        className={`logo-button ${activeIndex === 0 ? 'disabled' : ''}`}>
         {displayText}
         <span className="typing-cursor" />
-      </Link>
+      </a>
     </div>
   );
 };

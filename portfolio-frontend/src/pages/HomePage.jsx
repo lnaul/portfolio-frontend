@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import '../index.css'; // Import the CSS file
 import Header from '../components/Header';
 import SplitTextAnimation from '../components/SplitTextAnimation'; // Import the new component
-import PageTwo from './PageTwo';
+
 
 function HomePage() {
   return (
@@ -37,8 +37,22 @@ function HomePage() {
             </div>
           </section>
 
-          <section id="page-2" className="page-section"> {/* Page 2: Web Dev */}
-            <PageTwo />
+          <section id="page-2" className="page-section info-section"> {/* Page 2 */}
+            <div className="info-section-left">
+              <img src="/gifs/gif-22.webp" alt="Web Development Animation" style={{width: '100%', height: 'auto'}} />
+            </div>
+            <div className="info-section-right">
+              <h2>Web Development</h2>
+              <p>
+                This is the web development section. Here I will showcase my skills and projects related to web development.
+              </p>
+              <p>
+                I am proficient in various web technologies, including React, Node.js, and more.
+              </p>
+              <p>
+                My focus is on building responsive, performant, and user-friendly web applications.
+              </p>
+            </div>
           </section>
 
           <section id="page-3" className="page-section mobile-apps-section"> {/* Page 3: Mobile Apps */}

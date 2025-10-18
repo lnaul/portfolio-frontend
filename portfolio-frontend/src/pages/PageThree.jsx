@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Header from '../components/Header';
 import ScrollDownIndicator from '../components/icons/ScrollDownIndicator';
 import ScrollUpIndicator from '../components/icons/ScrollUpIndicator';
+import eventBus from '../utils/eventBus';
 import './PageThree.css';
 
 // Per your request, this is a fresh implementation based on the original code provided.
@@ -89,7 +90,7 @@ const PageThree = () => {
       let sections = component.querySelectorAll("section"),
         images = component.querySelectorAll(".bg"),
         headings = gsap.utils.toArray(component.querySelectorAll(".section-heading")),
-        bodyTexts = gsap.utils.toArray(component.querySelectorAll(".first .web-development-text")),
+        bodyTexts = gsap.utils.toArray(component.querySelectorAll(".web-development-text")),
         outerWrappers = gsap.utils.toArray(component.querySelectorAll(".outer")),
         innerWrappers = gsap.utils.toArray(component.querySelectorAll(".inner")),
         splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
@@ -134,7 +135,8 @@ const PageThree = () => {
             }, 0.2);
 
         if (index === 0) {
-          tl.fromTo(splitBodyTexts.flatMap(st => st.chars), { // Animate chars
+          const firstSlideTexts = splitBodyTexts.slice(0, 2);
+          tl.fromTo(firstSlideTexts.flatMap(st => st.chars), { // Animate chars
               autoAlpha: 0,
               yPercent: 100 * dFactor
           }, {
@@ -143,10 +145,23 @@ const PageThree = () => {
               duration: 0.5,
               ease: "power2",
               stagger: { each: 0.002, from: "random" },
-          }, 0.1); // Start this animation slightly after the heading animation
+          }, 0.1);
+        } else if (index === 1) {
+          const secondSlideTexts = splitBodyTexts.slice(2, 4);
+          tl.fromTo(secondSlideTexts.flatMap(st => st.chars), { // Animate chars
+              autoAlpha: 0,
+              yPercent: 100 * dFactor
+          }, {
+              autoAlpha: 1,
+              yPercent: 0,
+              duration: 0.5,
+              ease: "power2",
+              stagger: { each: 0.002, from: "random" },
+          }, 0.1);
         }
 
         currentIndex = index;
+        eventBus.dispatch('slideChanged', currentIndex);
       }
 
       const observer = Observer.create({
@@ -158,6 +173,15 @@ const PageThree = () => {
         tolerance: 10,
         preventDefault: true
       });
+
+      const handleNavigate = (index) => {
+        if (!animating) {
+          const direction = index > currentIndex ? 1 : -1;
+          gotoSection(index, direction);
+        }
+      };
+
+      eventBus.on('navigateTo', handleNavigate);
 
       gotoSection(0, 1);
       gsap.set(".columns-container", { visibility: "visible" });
@@ -174,6 +198,17 @@ const PageThree = () => {
       const buttons = component.querySelectorAll('.js-button');
       const buttonInstances = Array.from(buttons).map(el => new HoverBtn(el));
 
+      const startJourneyBtn = buttons[0];
+      const handleStartJourney = (e) => {
+        e.preventDefault();
+        if (!animating) {
+          gotoSection(1, 1);
+        }
+      };
+      if (startJourneyBtn) {
+        startJourneyBtn.addEventListener('click', handleStartJourney);
+      }
+
       const scrollDownBtn = document.getElementById('scroll-down-btn');
       const scrollUpBtn = document.getElementById('scroll-up-btn');
 
@@ -189,8 +224,12 @@ const PageThree = () => {
         splitHeadings.forEach(s => s.revert());
         splitBodyTexts.forEach(s => s.revert());
         buttonInstances.forEach(instance => instance.destroy());
+        if (startJourneyBtn) {
+          startJourneyBtn.removeEventListener('click', handleStartJourney);
+        }
         scrollDownBtn.removeEventListener('click', handleScrollDown);
         scrollUpBtn.removeEventListener('click', handleScrollUp);
+        eventBus.remove('navigateTo', handleNavigate);
       };
     };
 
@@ -239,11 +278,32 @@ const PageThree = () => {
           </div>
         </section>
         {/* ... other sections ... */}
-         <section className="second">
-          <div className="outer">
-            <div className="inner">
-              <div className="bg">
-                <h2 className="section-heading">Animated with GSAP</h2>
+         <section class="second">
+          <div class="outer">
+            <div class="inner">
+              <div class="bg one">
+                <div class="columns-container">
+                  <div class="column-left">
+                  <h2 class="section-heading web-development-heading"><span style={{color: '#c66a00'}}>Dee-Lighted</span> to Meet You</h2>
+                  <p class="web-development-text">Hello, World! I'm Dmitry, also known as <span style={{color: '#c66a00'}}>Dee, UX/UI Developer.</span> My story starts with a nickname I got while living in Thailand. <span style={{color: '#c66a00'}}>'Dee' Means 'Good' in Thai.</span> It's my daily reminder, my work must never be just good but beyond. My objective is to craft seamless digital experiences for <span style={{color: '#c66a00'}}>Web, Mobile Apps, & Games.</span></p>
+                  <p class="web-development-text">The portfolio you are navigating is a fully custom solution, architected with <span style={{color: '#c66a00'}}>Node.js & React,</span> which clearly demonstrates my expertise in bringing a design vision to life with integrated <span style={{color: '#c66a00'}}>High-Quality,</span> functional code. Take a moment to click around and experience the <span style={{color: '#c66a00'}}>Live Examples of My Work.</span></p>
+                  </div>
+                  <div class="column-right">
+                    <div class="gif-placeholder">
+                      <img src="/gifs/gif-21.webp" alt="gif-21" class="gif-element" />
+                    </div>
+                    <a href="#" class="button js-button">
+                      <span class="button__inner">
+                        <span class="button__text js-button__text">Start the Journey</span>
+                        <span class="button__hover js-button__hover">Start the Journey</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div class="new-columns-container">
+                  <div class="new-column-1"></div>
+                  <div class="new-column-2"></div>
+                </div>
               </div>
             </div>
           </div>
