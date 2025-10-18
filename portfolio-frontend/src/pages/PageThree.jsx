@@ -209,6 +209,8 @@ const PageThree = () => {
         startJourneyBtn.addEventListener('click', handleStartJourney);
       }
 
+
+
       const scrollDownBtn = document.getElementById('scroll-down-btn');
       const scrollUpBtn = document.getElementById('scroll-up-btn');
 
@@ -227,6 +229,7 @@ const PageThree = () => {
         if (startJourneyBtn) {
           startJourneyBtn.removeEventListener('click', handleStartJourney);
         }
+
         scrollDownBtn.removeEventListener('click', handleScrollDown);
         scrollUpBtn.removeEventListener('click', handleScrollUp);
         eventBus.remove('navigateTo', handleNavigate);
@@ -284,18 +287,18 @@ const PageThree = () => {
               <div class="bg one">
                 <div class="columns-container">
                   <div class="column-left">
-                  <h2 class="section-heading web-development-heading"><span style={{color: '#c66a00'}}>Dee-Lighted</span> to Meet You</h2>
-                  <p class="web-development-text">Hello, World! I'm Dmitry, also known as <span style={{color: '#c66a00'}}>Dee, UX/UI Developer.</span> My story starts with a nickname I got while living in Thailand. <span style={{color: '#c66a00'}}>'Dee' Means 'Good' in Thai.</span> It's my daily reminder, my work must never be just good but beyond. My objective is to craft seamless digital experiences for <span style={{color: '#c66a00'}}>Web, Mobile Apps, & Games.</span></p>
-                  <p class="web-development-text">The portfolio you are navigating is a fully custom solution, architected with <span style={{color: '#c66a00'}}>Node.js & React,</span> which clearly demonstrates my expertise in bringing a design vision to life with integrated <span style={{color: '#c66a00'}}>High-Quality,</span> functional code. Take a moment to click around and experience the <span style={{color: '#c66a00'}}>Live Examples of My Work.</span></p>
+                  <h2 class="section-heading web-development-heading"><span style={{color: '#c66a00'}}>Crafted</span> Web Solutions</h2>
+                  <p class="web-development-text">I ensure efficient project delivery by leveraging leading content management platform <span style={{color: '#c66a00'}}>WordPress with Elementor.</span> This allows rapid development. However, every digital experience I create is underpinned by a custom approach, using <span style={{color: '#c66a00'}}>HTML, CSS, and JavaScript</span> to guarantee responsiveness and a unique brand identity.</p>
+                  <p class="web-development-text">I believe in the power of combining established tools with custom code to deliver functional, <span style={{color: '#c66a00'}}>User-Centric Results</span> that are both beautiful and performant. You can see how I merge <span style={{color: '#c66a00'}}>Efficiency with Creativity</span> to build websites that stand out.</p>
                   </div>
                   <div class="column-right">
                     <div class="gif-placeholder">
-                      <img src="/gifs/gif-21.webp" alt="gif-21" class="gif-element" />
+                      <img src="/gifs/gif-11.webp" alt="gif-11" class="gif-element" />
                     </div>
-                    <a href="#" class="button js-button">
+                    <a href="https://dhartidesign.com/" target="_blank" rel="noopener noreferrer" class="button js-button">
                       <span class="button__inner">
-                        <span class="button__text js-button__text">Start the Journey</span>
-                        <span class="button__hover js-button__hover">Start the Journey</span>
+                        <span class="button__text js-button__text">View Live Project</span>
+                        <span class="button__hover js-button__hover">View Live Project</span>
                       </span>
                     </a>
                   </div>
