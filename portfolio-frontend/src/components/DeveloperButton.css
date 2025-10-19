@@ -92,4 +92,9 @@
 .logo-button.disabled {
   opacity: 1;
   cursor: default;
+  color: #c66a00;
+}
+
+.logo-button.disabled .typing-cursor {
+  --blink-color: #c66a0080;
 }
