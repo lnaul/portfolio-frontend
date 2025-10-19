@@ -158,6 +158,30 @@ const PageThree = () => {
               ease: "power2",
               stagger: { each: 0.002, from: "random" },
           }, 0.1);
+        } else if (index === 2) {
+          const thirdSlideTexts = splitBodyTexts.slice(4, 6);
+          tl.fromTo(thirdSlideTexts.flatMap(st => st.chars), { // Animate chars
+              autoAlpha: 0,
+              yPercent: 100 * dFactor
+          }, {
+              autoAlpha: 1,
+              yPercent: 0,
+              duration: 0.5,
+              ease: "power2",
+              stagger: { each: 0.002, from: "random" },
+          }, 0.1);
+        } else if (index === 3) {
+          const fourthSlideTexts = splitBodyTexts.slice(6, 8);
+          tl.fromTo(fourthSlideTexts.flatMap(st => st.chars), { // Animate chars
+              autoAlpha: 0,
+              yPercent: 100 * dFactor
+          }, {
+              autoAlpha: 1,
+              yPercent: 0,
+              duration: 0.5,
+              ease: "power2",
+              stagger: { each: 0.002, from: "random" },
+          }, 0.1);
         }
 
         currentIndex = index;
@@ -293,7 +317,7 @@ const PageThree = () => {
                   </div>
                   <div class="column-right">
                     <div class="gif-placeholder">
-                      <img src="/gifs/gif-11.webp" alt="gif-11" class="gif-element" />
+                      <img src="/gifs/gif-26.webp" alt="gif-26" class="gif-element" />
                     </div>
                     <a href="https://dhartidesign.com/" target="_blank" rel="noopener noreferrer" class="button js-button">
                       <span class="button__inner">
@@ -314,8 +338,29 @@ const PageThree = () => {
         <section className="third">
           <div className="outer">
             <div className="inner">
-              <div className="bg">
-                <h2 className="section-heading">GreenSock</h2>
+              <div className="bg one">
+                <div className="columns-container">
+                  <div className="column-left">
+                  <h2 className="section-heading web-development-heading"><span style={{color: '#c66a00'}}>Crafted</span> Web Solutions</h2>
+                  <p className="web-development-text">I ensure efficient project delivery by leveraging leading content management platform <span style={{color: '#c66a00'}}>WordPress with Elementor.</span> This allows rapid development. However, every digital experience I create is underpinned by a custom approach, using <span style={{color: '#c66a00'}}>HTML, CSS, and JavaScript</span> to guarantee responsiveness and a unique brand identity.</p>
+                  <p className="web-development-text">I believe in the power of combining established tools with custom code to deliver functional, <span style={{color: '#c66a00'}}>User-Centric Results</span> that are both beautiful and performant. You can see how I merge <span style={{color: '#c66a00'}}>Efficiency with Creativity</span> to build websites that stand out.</p>
+                  </div>
+                  <div className="column-right">
+                    <div className="gif-placeholder">
+                      <img src="/gifs/gif-28.webp" alt="gif-28" className="gif-element" />
+                    </div>
+                    <a href="https://dhartidesign.com/" target="_blank" rel="noopener noreferrer" className="button js-button">
+                      <span className="button__inner">
+                        <span className="button__text js-button__text">View Live Project</span>
+                        <span className="button__hover js-button__hover">View Live Project</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div className="new-columns-container">
+                  <div className="new-column-1"></div>
+                  <div className="new-column-2"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -323,21 +368,34 @@ const PageThree = () => {
         <section className="fourth">
           <div className="outer">
             <div className="inner">
-              <div className="bg">
-                <h2 className="section-heading">Animation platform</h2>
+              <div className="bg one">
+                <div className="columns-container">
+                  <div className="column-left">
+                  <h2 className="section-heading web-development-heading"><span style={{color: '#c66a00'}}>Crafted</span> Web Solutions</h2>
+                  <p className="web-development-text">I ensure efficient project delivery by leveraging leading content management platform <span style={{color: '#c66a00'}}>WordPress with Elementor.</span> This allows rapid development. However, every digital experience I create is underpinned by a custom approach, using <span style={{color: '#c66a00'}}>HTML, CSS, and JavaScript</span> to guarantee responsiveness and a unique brand identity.</p>
+                  <p className="web-development-text">I believe in the power of combining established tools with custom code to deliver functional, <span style={{color: '#c66a00'}}>User-Centric Results</span> that are both beautiful and performant. You can see how I merge <span style={{color: '#c66a00'}}>Efficiency with Creativity</span> to build websites that stand out.</p>
+                  </div>
+                  <div className="column-right">
+                    <div className="gif-placeholder">
+                      <img src="/gifs/gif-16.webp" alt="gif-16" className="gif-element" />
+                    </div>
+                    <a href="https://dhartidesign.com/" target="_blank" rel="noopener noreferrer" className="button js-button">
+                      <span className="button__inner">
+                        <span className="button__text js-button__text">View Live Project</span>
+                        <span className="button__hover js-button__hover">View Live Project</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+                <div className="new-columns-container">
+                  <div className="new-column-1"></div>
+                  <div className="new-column-2"></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="fifth">
-          <div className="outer">
-            <div className="inner">
-              <div className="bg">
-                <h2 className="section-heading">Keep scrolling</h2>
-              </div>
-            </div>
-          </div>
-        </section>
+
       </div>
       <div id="scroll-down-btn" className="scroll-indicator scroll-down-indicator">
         <ScrollDownIndicator ref={scrollDownRef} />

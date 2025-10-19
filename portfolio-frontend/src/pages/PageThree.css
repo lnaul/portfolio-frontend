@@ -64,7 +64,7 @@
 
 
 
-.section-three-container .first .bg::after, .section-three-container .second .bg::after {
+.section-three-container .first .bg::after, .section-three-container .second .bg::after, .section-three-container .third .bg::after, .section-three-container .fourth .bg::after {
   content: '';
   position: absolute;
   top: 0;
@@ -83,7 +83,7 @@
   
 }
 
-.section-three-container .first .bg::before, .section-three-container .second .bg::before {
+.section-three-container .first .bg::before, .section-three-container .second .bg::before, .section-three-container .third .bg::before {
   content: '';
   position: absolute;
   top: 0;
@@ -94,26 +94,14 @@
   z-index: -2;
 }
 
-.section-three-container .second .bg {
+.section-three-container .second .bg, .section-three-container .third .bg, .section-three-container .fourth .bg {
   background-image: var(--bg-gradient),
     url("https://assets.codepen.io/16327/site-landscape-5.jpeg");
 }
 
-.section-three-container .third .bg {
-  background-image: var(--bg-gradient),
-    url("https://assets.codepen.io/16327/site-landscape-2.jpg");
-}
 
-.section-three-container .fourth .bg {
-  background-image: var(--bg-gradient),
-    url("https://assets.codepen.io/16327/site-landscape-6.jpg");
-}
 
-.section-three-container .fifth .bg {
-  background-image: var(--bg-gradient),
-    url("https://assets.codepen.io/16327/site-landscape-8.jpg");
-  background-position: 50% 45%;
-}
+
 
 .section-three-container h2 * {
   will-change: transform;
