@@ -593,4 +593,11 @@ a.button, a.btn {
   .scroll-up-indicator {
     top: 0px;
   }
-}  
+}
+
+@media (min-width: 1081px) {
+  .section-three-container .second .columns-container,
+  .section-three-container .fourth .columns-container {
+    flex-direction: row-reverse;
+  }
+}
