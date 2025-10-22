@@ -91,6 +91,7 @@ const PageThree = () => {
         images = component.querySelectorAll(".bg"),
         headings = gsap.utils.toArray(component.querySelectorAll(".section-heading")),
         bodyTexts = gsap.utils.toArray(component.querySelectorAll(".web-development-text")),
+        rightColumns = gsap.utils.toArray(component.querySelectorAll(".column-right")),
         outerWrappers = gsap.utils.toArray(component.querySelectorAll(".outer")),
         innerWrappers = gsap.utils.toArray(component.querySelectorAll(".inner")),
         splitHeadings = headings.map(heading => new SplitText(heading, { type: "chars,words,lines", linesClass: "clip-text" })),
@@ -114,6 +115,7 @@ const PageThree = () => {
         if (currentIndex >= 0) {
           gsap.set(sections[currentIndex], { zIndex: 0 });
           tl.to(images[currentIndex], { yPercent: -15 * dFactor })
+            .to(rightColumns[currentIndex], { opacity: 0, scale: 0.8, duration: 0.5, ease: "power2.inOut" }, 0)
             .set(sections[currentIndex], { autoAlpha: 0 });
         }
         gsap.set(sections[index], { autoAlpha: 1, zIndex: 1 });
@@ -123,6 +125,7 @@ const PageThree = () => {
             yPercent: 0 
           }, 0)
           .fromTo(images[index], { yPercent: 15 * dFactor }, { yPercent: 0 }, 0)
+          .fromTo(rightColumns[index], { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "power2.inOut" }, 0.2)
           .fromTo(splitHeadings[index].chars, { 
               autoAlpha: 0, 
               yPercent: 150 * dFactor
