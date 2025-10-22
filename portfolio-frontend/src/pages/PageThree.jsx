@@ -344,9 +344,9 @@ const PageThree = () => {
               <div className="bg one">
                 <div className="columns-container">
                   <div className="column-left">
-                  <h2 className="section-heading web-development-heading"><span style={{color: '#c66a00'}}>Crafted</span> Web Solutions</h2>
-                  <p className="web-development-text">I ensure efficient project delivery by leveraging leading content management platform <span style={{color: '#c66a00'}}>WordPress with Elementor.</span> This allows rapid development. However, every digital experience I create is underpinned by a custom approach, using <span style={{color: '#c66a00'}}>HTML, CSS, and JavaScript</span> to guarantee responsiveness and a unique brand identity.</p>
-                  <p className="web-development-text">I believe in the power of combining established tools with custom code to deliver functional, <span style={{color: '#c66a00'}}>User-Centric Results</span> that are both beautiful and performant. You can see how I merge <span style={{color: '#c66a00'}}>Efficiency with Creativity</span> to build websites that stand out.</p>
+                  <h2 className="section-heading web-development-heading">Mobile App <span style={{color: '#c66a00'}}>Architecture</span></h2>
+<p className="web-development-text">I take mobile app ideas from a raw concept to a polished, <span style={{color: '#c66a00'}}>Interactive Reality.</span> I focus on solving real-world user problems by designing custom mobile interfaces and mapping out unique user flows. My <span style={{color: '#c66a00'}}>Figma</span> prototypes serve as a tested and validated model, proving the full <span style={{color: '#c66a00'}}>UX/UI Strategy is Sound.</span></p>
+<p className="web-development-text">This methodical approach ensures the final app is not only <span style={{color: '#c66a00'}}>Beautiful but Also Highly Performant</span> and perfectly aligned with its business goals. Early validation confirms every design choice, establishing a quality-assured blueprint that thereby guarantees a <span style={{color: '#c66a00'}}>Seamless Transition to Engineering and Launch.</span></p>
                   </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
@@ -354,8 +354,8 @@ const PageThree = () => {
                     </div>
                     <a href="https://dhartidesign.com/" target="_blank" rel="noopener noreferrer" className="button js-button">
                       <span className="button__inner">
-                        <span className="button__text js-button__text">View Live Project</span>
-                        <span className="button__hover js-button__hover">View Live Project</span>
+                        <span className="button__text js-button__text">Explore App Flow</span>
+                        <span className="button__hover js-button__hover">Explore App Flow</span>
                       </span>
                     </a>
                   </div>

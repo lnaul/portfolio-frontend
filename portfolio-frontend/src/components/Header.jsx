@@ -20,7 +20,7 @@ const Header = () => {
     <nav className="main-nav">
       <div className="nav-links-frame">
         <a href="javascript:void(0)" onClick={() => eventBus.dispatch('navigateTo', 1)} className={`nav-link-text ${activeIndex === 1 ? 'active' : ''}`}>Web Dev</a>
-        <a href="javascript:void(0)" onClick={() => eventBus.dispatch('navigateTo', 2)} className={`nav-link-text ${activeIndex === 2 ? 'active' : ''}`}>Mobile Apps</a>
+        <a href="javascript:void(0)" onClick={() => eventBus.dispatch('navigateTo', 2)} className={`nav-link-text ${activeIndex === 2 ? 'active' : ''}`}>Mobile App</a>
         <a href="javascript:void(0)" onClick={() => eventBus.dispatch('navigateTo', 3)} className={`nav-link-text ${activeIndex === 3 ? 'active' : ''}`}>Game Dev</a>
 
       </div>
