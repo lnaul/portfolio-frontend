@@ -83,7 +83,7 @@
   
 }
 
-.section-three-container .first .bg::before, .section-three-container .second .bg::before, .section-three-container .third .bg::before {
+.section-three-container .first .bg::before, .section-three-container .second .bg::before, .section-three-container .third .bg::before, .section-three-container .fourth .bg::before {
   content: '';
   position: absolute;
   top: 0;

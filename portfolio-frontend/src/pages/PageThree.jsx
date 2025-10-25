@@ -352,7 +352,7 @@ const PageThree = () => {
                     <div className="gif-placeholder">
                       <img src="/gifs/gif-28.webp" alt="gif-28" className="gif-element" />
                     </div>
-                    <a href="https://dhartidesign.com/" target="_blank" rel="noopener noreferrer" className="button js-button">
+                    <a href="https://www.figma.com/proto/K88Q9FeHs3IOsIeZc45Njx/BookMySpotDark?node-id=2006-796&amp;starting-point-node-id=2006%3A796&amp;t=RzaMxYNYjwYZt9PN-1" target="_blank" rel="noopener noreferrer" className="button js-button">
                       <span className="button__inner">
                         <span className="button__text js-button__text">Explore App Flow</span>
                         <span className="button__hover js-button__hover">Explore App Flow</span>
@@ -374,18 +374,18 @@ const PageThree = () => {
               <div className="bg one">
                 <div className="columns-container">
                   <div className="column-left">
-                  <h2 className="section-heading web-development-heading"><span style={{color: '#c66a00'}}>Crafted</span> Web Solutions</h2>
-                  <p className="web-development-text">I ensure efficient project delivery by leveraging leading content management platform <span style={{color: '#c66a00'}}>WordPress with Elementor.</span> This allows rapid development. However, every digital experience I create is underpinned by a custom approach, using <span style={{color: '#c66a00'}}>HTML, CSS, and JavaScript</span> to guarantee responsiveness and a unique brand identity.</p>
-                  <p className="web-development-text">I believe in the power of combining established tools with custom code to deliver functional, <span style={{color: '#c66a00'}}>User-Centric Results</span> that are both beautiful and performant. You can see how I merge <span style={{color: '#c66a00'}}>Efficiency with Creativity</span> to build websites that stand out.</p>
-                  </div>
+                  <h2 className="section-heading web-development-heading">True <span style={{color: '#c66a00'}}>Interactive</span> Systems</h2>
+                  <p className="web-development-text">My expertise extends to creating complex interactive systems integration, demonstrated by my <span style={{color: '#c66a00'}}>Solo-Developed PC Game.</span> This project showcases my full technical proficiency in both <span style={{color: '#c66a00'}}>Unity 3D and C#,</span> where I personally managed the entire pipeline from game logic and core mechanics.</p>
+                  <p className="web-development-text">Undertaking this challenging solo project allowed me to successfully architect a <span style={{color: '#c66a00'}}>High-Performance & User-Friendly</span> system from the ground up. It demonstrates my coding discipline, <span style={{color: '#c66a00'}}>Exceptional Problem-Solving Skills,</span> and truly dedicated to creating a functional and polished product.</p>
+                </div>
                   <div className="column-right">
                     <div className="gif-placeholder">
                       <img src="/gifs/gif-16.webp" alt="gif-16" className="gif-element" />
                     </div>
-                    <a href="https://dhartidesign.com/" target="_blank" rel="noopener noreferrer" className="button js-button">
+                    <a href="https://n-a-u.itch.io/underwater" target="_blank" rel="noopener noreferrer" className="button js-button">
                       <span className="button__inner">
-                        <span className="button__text js-button__text">View Live Project</span>
-                        <span className="button__hover js-button__hover">View Live Project</span>
+                        <span className="button__text js-button__text">Launch the Game</span>
+                        <span className="button__hover js-button__hover">Launch the Game</span>
                       </span>
                     </a>
                   </div>
